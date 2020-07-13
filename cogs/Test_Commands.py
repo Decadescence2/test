@@ -1,3 +1,10 @@
+import discord
+import time
+import os
+import random
+from itertools import cycle
+from discord.ext import commands
+
 class Test_Commands(commands.Cog):
 
     def __init__(self, client):
