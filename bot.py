@@ -1,5 +1,4 @@
 import discord
-import random
 import time
 import os
 import asyncio
@@ -12,11 +11,9 @@ client = commands.Bot(command_prefix = '=')
 
 Messages = ['1', '2', '3']
 
-
-# #Events
-# @client.event
-# async def on_ready():
-#     print('Bot is Online, Loading Files...')
+@client.event
+async def on_ready():
+    print('Bot is Online, Loading Files...')
 
 async def change_status():
     await client.wait_until_ready()
@@ -29,7 +26,6 @@ async def change_status():
         print ('Status Changed')
            
 @client.command()
-# @commands.check(IDCheck)
 async def Test(ctx):
     await ctx.send('working')
 
