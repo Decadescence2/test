@@ -46,6 +46,10 @@ async def on_command_error(ctx, error):
         await ctx.send('You do not have permission to use this command')
 
 @client.command()
+async def Commands(ctx):
+    await ctx.send('__**Commands: **__ ' + '```(x = Amount Of Pings)\nSpamVoss(x)\nSpamBaldwin(x)\nSpamJay(x)\nSpamSimon(X)\nSpamConnor(x)\nSpamAaron(x)\nSpamNiall(x)\nSpamPete(x)```')
+
+@client.command()
 # @commands.check(IDCheck)
 async def Test(ctx):
     await ctx.send('working')
