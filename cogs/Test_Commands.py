@@ -11,9 +11,9 @@ class Test_Commands(commands.Cog):
         self.client = client
 
 
-@commands.Cog.listener()
-async def on_ready(self):
-    print ('Test Command File Loaded')
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print ('Test Command File Loaded')
 
 @commands.command()
 async def gilbert(self, ctx):
