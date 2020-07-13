@@ -1,0 +1,40 @@
+import discord
+import asyncio
+import os
+from itertools import cycle
+from discord.ext import commands
+
+MyID = '<@339508544409829376>'
+VossID = '<@215985007326527488>'
+BaldwinID = '<@248950488731484161>'
+JayID = '<@380887572970340362>'
+ConnorID  = '<@151063490168094721>'
+AaronID = '<@176810214257852416>'
+NiallID = '<@246568122457391105>'
+PeteID = '<@400336685084311552>'
+SimonID = '<@374657763269410836>'
+
+class Spammers(commands.Cog):
+
+    def __init__(self, client):
+        self.client = client
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print ('Spammer Code Loaded')
+    def IDCheck(ctx):
+        return ctx.message.author.id == 339508544409829376
+
+    @commands.command()
+    @commands.check(IDCheck)
+    async def Test(self, ctx, *, question):
+        spamnumber = 0
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + MyID);
+                await asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
+
+
+def setup(client):
+    client.add_cog(Spammers(client))
