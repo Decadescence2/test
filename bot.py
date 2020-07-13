@@ -9,8 +9,6 @@ from discord.ext import commands, tasks
 from itertools import cycle
 
 
-TOKEN = 'NzMyMDIwMzMxMzE2NzcyOTk2.XwuhGQ.4xRE95CJXLcVwd4dQvnyAgHZg_I'
-
 client = commands.Bot(command_prefix = '=')
 
 @client.command()
@@ -19,4 +17,4 @@ async def Test(ctx):
     await ctx.send('working')
 
 
-client.run(TOKEN)
+client.run(os.environ['token'])
