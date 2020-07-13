@@ -9,7 +9,26 @@ from itertools import cycle
 
 client = commands.Bot(command_prefix = '=')
 
-Messages = ['1', '2', '3']
+Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game Dies',
+            'With My Amazing Headset', 'UNO.', 'With My Fallout Strap On Mod', 'Speaking Over Niall'
+            , 'Dont Starve IRL', '~']
+
+@client.command()
+async def Load(ctx, extension):
+    client.load_extension(f'cogs.{extension}')
+
+@client.command()
+async def Unload(ctx, extension):
+    client.unload_extension(f'cogs.{extension}')
+
+@client.command()
+async def Reload(ctx, extension):
+    client.unload_extension(f'cogs.{extension}')
+    client.load_extension(f'cogs.{extension}')
+
+for filename in os.listdir('./cogs'):
+    if filename.endswith('.py'):
+        client.load_extension(f'cogs.{filename[:-3]}')
 
 @client.event
 async def on_ready():
