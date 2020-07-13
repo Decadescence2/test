@@ -23,7 +23,7 @@ class Spammers(commands.Cog):
     async def on_ready(self):
         print ('Spammer Code Loaded')
     def IDCheck(ctx):
-        return ctx.message.author.id == 339508544409829376
+        return ctx.message.author.id == 732320610373337108
 
     @commands.command()
     @commands.check(IDCheck)
