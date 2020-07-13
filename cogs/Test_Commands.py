@@ -15,3 +15,6 @@ async def gilbert(self, ctx):
         await ctx.send('https://imgur.com/8DjzVc5')
         gilbertN += 1
         print ({gilbertN})
+
+def setup(client):
+    client.add_cog(Test_Commands(client))
