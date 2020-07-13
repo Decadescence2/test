@@ -35,6 +35,89 @@ class Spammers(commands.Cog):
                 spamnumber += 1
                 print ({spamnumber})
 
+    @commands.command()
+    @commands.check(IDCheck)
+    async def SpamSimon(self, ctx, *, question):
+        spamnumber = 0
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + SimonID);
+                asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
+
+    @commands.command()
+    @commands.check(IDCheck)
+    async def SpamPete(self, ctx, *, question):
+        spamnumber = 0
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + PeteID);
+                asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
+
+
+    @commands.command()
+    @commands.check(IDCheck)
+    async def SpamNiall(self, ctx, *, question):
+        spamnumber = 0
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + NiallID);
+                asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
+
+
+    @commands.command()
+    @commands.check(IDCheck)
+    async def SpamAaron(self, ctx, *, question):
+        spamnumber = 0
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + AaronID);
+                asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
+
+
+    @commands.command()
+    @commands.check(IDCheck)
+    async def SpamConnor(self, ctx, *, question):
+        spamnumber = 0
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + ConnorID);
+                asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
+
+    @commands.command()
+    @commands.check(IDCheck)
+    async def SpamJay(self, ctx, *, question):
+        spamnumber = 0
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + JayID);
+                asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
+
+    @commands.command()
+    @commands.check(IDCheck)
+    async def SpamBaldwin(self, ctx, *, question):
+        spamnumber = 0
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + BaldwinID);
+                asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
+
+    @commands.command()
+    @commands.check(IDCheck)
+    async def SpamVoss(self, ctx, *, question):
+        spamnumber = 0
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + VossID);
+                asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
+
 
 def setup(client):
     client.add_cog(Spammers(client))
