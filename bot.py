@@ -26,7 +26,16 @@ Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game D
 # async def on_ready():
 #     print('Bot is Online, Loading Files...')
 
+async def change_status():
+    await client.wait_until_ready()
+    status = cycle(Messages)
 
+    while not client.is_closed():
+        current_status = next(status)
+        await client.change_presence(activity=discord.Game(name=current_status))
+        await asyncio.sleep(5)
+        print ('Status Changed')
+            
 @client.event
 async def on_message(message):
     member = message.author.id
