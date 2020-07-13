@@ -27,7 +27,7 @@ class Spammers(commands.Cog):
 
     @commands.command()
     @commands.check(IDCheck)
-    async def Test(self, ctx, *, question):
+    async def SpamTest(self, ctx, *, question):
         spamnumber = 0
         while spamnumber < int(question):
                 await ctx.send('**LURKING!?** ' + MyID);
