@@ -7,7 +7,7 @@ from discord.ext import commands, tasks
 from itertools import cycle
 
 
-client = commands.Bot(command_prefix = '=')
+client = commands.Bot(command_prefix = '~')
 
 Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game Dies',
             'With My Amazing Headset', 'UNO.', 'With My Fallout Strap On Mod', 'Speaking Over Niall'
@@ -51,12 +51,12 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send('Command does not exist')
     if isinstance(error, commands.CheckFailure):
-        await ctx.send('You do not have permission to use this command')        
-        
+        await ctx.send('You do not have permission to use this command')
+
 @client.command()
 async def Commands(ctx):
     await ctx.send('__**Commands: **__ ' + '```(x = Amount Of Pings)\nSpamVoss(x)\nSpamBaldwin(x)\nSpamJay(x)\nSpamSimon(X)\nSpamConnor(x)\nSpamAaron(x)\nSpamNiall(x)\nSpamPete(x)```')
-            
+
 @client.command()
 async def Test(ctx):
     await ctx.send('working')
