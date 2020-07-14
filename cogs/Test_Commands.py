@@ -19,12 +19,12 @@ class Test_Commands(commands.Cog):
     async def Help(self, ctx):
         author = ctx.message.author
 
-        embed = discord.embed(
-            colour = discord.Colour.blue()
+        embed = discord.Embed(
+            colour = discord.Colour.orange()
         )
 
         embed.set_author(name='Commands')
-        embed.add_field(name='SpamCommands', value='SpamVoss(x)\nSpamBaldwin(x)\nSpamJay(x)\nSpamSimon(X)\nSpamConnor(x)\nSpamAaron(x)\nSpamNiall(x)\nSpamPete(x)')
+        embed.add_field(name='SpamCommands', value='SpamVoss(x)\nSpamBaldwin(x)\nSpamJay(x)\nSpamSimon(X)\nSpamConnor(x)\nSpamAaron(x)\nSpamNiall(x)\nSpamPete(x)',inline=False)
 
         await author.send(embed=embed)
 
