@@ -32,14 +32,6 @@ for filename in os.listdir('./cogs'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
 @client.event
-async def on_message(message):
-    member = message.author.id
-    if message.author.id == 151063490168094721:
-        if "gif" in message.content:
-            responses = ['https://imgur.com/SFY00cc','https://imgur.com/l1isdSZ','https://imgur.com/XiST5sG','https://imgur.com/Q0c3E8c','https://imgur.com/YFwZgbl','https://imgur.com/vlkOGaf','https://imgur.com/aWyR7iX', 'https://imgur.com/8DjzVc5', 'https://imgur.com/ovOGXf8','https://imgur.com/8HMehnO','https://imgur.com/jvlfhzn','https://imgur.com/8KMJ6sr']
-            await message.channel.send(random.choice(responses))
-
-@client.event
 async def on_ready():
     print('Bot is Online, Loading Files...')
 
@@ -62,6 +54,13 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
         await ctx.send('You do not have permission to use this command')
 
+@client.event
+async def on_message(message):
+    member = message.author.id
+    if message.author.id == 339508544409829376:
+        if "gif" in message.content:
+            responses = ['https://imgur.com/SFY00cc','https://imgur.com/l1isdSZ','https://imgur.com/XiST5sG','https://imgur.com/Q0c3E8c','https://imgur.com/YFwZgbl','https://imgur.com/vlkOGaf','https://imgur.com/aWyR7iX', 'https://imgur.com/8DjzVc5', 'https://imgur.com/ovOGXf8','https://imgur.com/8HMehnO','https://imgur.com/jvlfhzn','https://imgur.com/8KMJ6sr']
+            await message.channel.send(random.choice(responses))
 
 @client.command()
 async def Commands(ctx):
