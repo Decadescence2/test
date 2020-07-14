@@ -15,6 +15,39 @@ class Test_Commands(commands.Cog):
     async def on_ready(self):
         print ('Test Command File Loaded')
 
+    @commands.command(aliases = ['8Ball', '8ball'])
+    async def _8Ball(self, ctx, *, question):
+        responses = ['As I see it, yes',
+                     'Ask again later',
+                     'Better not tell you now.',
+                     'Cannot predict now.',
+                     'Concentrate and ask again.',
+                     'Don’t count on it.',
+                     'It is certain.',
+                     'It is decidedly so.',
+                     'Most likely.',
+                     'My reply is no.',
+                     'My sources say no.',
+                     'Outlook not so good.',
+                     'Outlook good.',
+                     'Reply hazy, try again.',
+                     'Signs point to yes.',
+                     'Very doubtful.',
+                     'Without a doubt.',
+                     'Yes.',
+                     'Yes – definitely.',
+                     'You may rely on it.']
+        await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
+
+        @commands.command(pass_context=True)
+        async def RandomNumber(self, ctx, number):
+            try:
+                arg = random.randint(1, int(number))
+            except ValueError:
+                await ctx.send("Invalid number")
+            else:
+                await ctx.send(str(arg))
+
     @commands.command(pass_context = True)
     async def Help(self, ctx):
         author = ctx.message.author
@@ -26,6 +59,7 @@ class Test_Commands(commands.Cog):
         embed.set_author(name='Commands')
         embed.add_field(name='Spam Commands', value='SpamVoss(x)\nSpamBaldwin(x)\nSpamJay(x)\nSpamSimon(X)\nSpamConnor(x)\nSpamAaron(x)\nSpamNiall(x)\nSpamPete(x)',inline=False)
         embed.add_field(name='MegaSpam Commands', value='MSVoss\nMSBaldwin\nMSJay\nMSConnor',inline=False)
+        embed.add_field(name='Random Commands', value='8Ball\nRandomNumber(x)',inline=False)
         embed.add_field(name='Admin Commands', value='Load (cog_name)\nUnload (cog_name)\nReload (cog_name)\n', inline=False)
 
         await author.send(embed=embed)
