@@ -15,7 +15,7 @@ class Test_Commands(commands.Cog):
     async def on_ready(self):
         print ('Test Command File Loaded')
 
-    @client.command(pass_context = True)
+    @commands.command(pass_context = True)
     async def Help(self, ctx):
         author = ctx.message.author
 
@@ -25,7 +25,7 @@ class Test_Commands(commands.Cog):
 
         embed.set_author(name='Commands')
         embed.add_field(name='SpamCommands', value='SpamVoss(x)\nSpamBaldwin(x)\nSpamJay(x)\nSpamSimon(X)\nSpamConnor(x)\nSpamAaron(x)\nSpamNiall(x)\nSpamPete(x)')
-        
+
         await author.send(embed=embed)
 
 def setup(client):
