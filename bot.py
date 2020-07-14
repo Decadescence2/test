@@ -53,9 +53,10 @@ async def on_command_error(ctx, error):
         await ctx.send('You do not have permission to use this command')
 
 @client.event
+await client.process_commands(message)
 async def on_message(message):
     member = message.author.id
-    if message.author.id == XXXXX:
+    if message.author.id == 339508544409829376:
         if "gif" in message.content:
             responses = ['This part works','']
             await message.channel.send(random.choice(responses))
