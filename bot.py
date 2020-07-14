@@ -2,15 +2,17 @@ import discord
 import time
 import os
 import asyncio
-import random
 
 from discord.ext import commands, tasks
 from itertools import cycle
 
 
 client = commands.Bot(command_prefix = '~')
+client.remove_command('help')
 
-Messages = ['1', '2', '3','4']
+Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game Dies',
+            'With My Amazing Headset', 'UNO.', 'With My Fallout Strap On Mod', 'Speaking Over Niall'
+            , 'Dont Starve IRL', '~']
 
 @client.command()
 async def Load(ctx, extension):
@@ -31,7 +33,7 @@ for filename in os.listdir('./cogs'):
 
 @client.event
 async def on_ready():
-    print('Bot is Online')
+    print('Bot is Online, Loading Files...')
 
 async def change_status():
     await client.wait_until_ready()
@@ -56,18 +58,14 @@ async def on_command_error(ctx, error):
 async def on_message(message):
     await client.process_commands(message)
     member = message.author.id
-    if message.author.id == 339508544409829376:
+    if message.author.id == 151063490168094721:
         if "gif" in message.content:
-            responses = ['This part works','']
+            responses = ['https://imgur.com/SFY00cc','https://imgur.com/l1isdSZ','https://imgur.com/XiST5sG','https://imgur.com/Q0c3E8c','https://imgur.com/YFwZgbl','https://imgur.com/vlkOGaf','https://imgur.com/aWyR7iX', 'https://imgur.com/8DjzVc5', 'https://imgur.com/ovOGXf8','https://imgur.com/8HMehnO','https://imgur.com/jvlfhzn','https://imgur.com/8KMJ6sr']
             await message.channel.send(random.choice(responses))
 
 @client.command()
-async def Commands(ctx):
-    await ctx.send('shows commands')
-
-@client.command()
 async def Test(ctx):
-    await ctx.send('command works')
+    await ctx.send('working')
 
 client.loop.create_task(change_status())
 client.run(os.environ['token'])
