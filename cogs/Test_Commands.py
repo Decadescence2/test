@@ -39,27 +39,19 @@ class Test_Commands(commands.Cog):
                      'You may rely on it.']
         await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
 
-        @commands.command(pass_context=True)
-        async def RandomNumber(self, ctx, number):
-            try:
-                arg = random.randint(1, int(number))
-            except ValueError:
-                await ctx.send("Invalid number")
-            else:
-                await ctx.send(str(arg))
 
     @commands.command(pass_context = True)
     async def Help(self, ctx):
         author = ctx.message.author
 
         embed = discord.Embed(
-            colour = discord.Colour.orange()
+            colour = discord.Colour.blue()
         )
 
         embed.set_author(name='Commands')
         embed.add_field(name='Spam Commands', value='SpamVoss(x)\nSpamBaldwin(x)\nSpamJay(x)\nSpamSimon(X)\nSpamConnor(x)\nSpamAaron(x)\nSpamNiall(x)\nSpamPete(x)',inline=False)
         embed.add_field(name='MegaSpam Commands', value='MSVoss\nMSBaldwin\nMSJay\nMSConnor',inline=False)
-        embed.add_field(name='Random Commands', value='8Ball\nRandomNumber(x)',inline=False)
+        embed.add_field(name='Random Commands', value='8Ball',inline=False)
         embed.add_field(name='Admin Commands', value='Load (cog_name)\nUnload (cog_name)\nReload (cog_name)\n', inline=False)
 
         await author.send(embed=embed)
