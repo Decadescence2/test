@@ -42,7 +42,7 @@ class Spammers(commands.Cog):
     async def SpamTest(self, ctx, *, question):
         if FFA == False:
             @commands.check(IDCheck)
-        if FFA == True:
+        else:
             spamnumber = 0
             while spamnumber < int(question):
                     await ctx.send('**LURKING!?** ' + MyID);
