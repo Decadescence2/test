@@ -53,7 +53,7 @@ class Spammers(commands.Cog):
         global status
         if status == 'Global':
             status = 'Local'
-        elif status = 'Local':
+        elif status == 'Local':
             status = 'Global'
         await ctx.send(f'Status has been changed to {status}')
         return status
