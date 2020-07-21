@@ -64,17 +64,6 @@ async def on_message(message):
             await message.channel.send(random.choice(responses))
 
 @client.command()
-async def ToggleFFA(ctx):
-    if FFA == False:
-        FFA = True
-        print (FFA)
-        await message.channel.send('Free For All mode: Enabled')
-    if FFA == True:
-        FFA = False
-        print (FFA)
-        await message.channel.send('Free For All mode: Disabled')
-
-@client.command()
 async def Test(ctx):
     await ctx.send('working')
 
