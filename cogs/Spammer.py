@@ -35,16 +35,13 @@ class Spammers(commands.Cog):
     if status == 'Local':
         if ctx.user.id in users:
             pass
+            await ctx.send('User is moderator part works')
         else:
             return
     else:
         pass
-        spamnumber = 0
-        while spamnumber < int(question):
-                await ctx.send('**LURKING!?** ' + MyID);
-                await asyncio.sleep(1)
-                spamnumber += 1
-                print ({spamnumber})
+        await ctx.send('Status is set to global')
+
 
     @commands.is_owner()
     @commands.command()
@@ -65,22 +62,22 @@ class Spammers(commands.Cog):
         await ctx.send(f'Status has been changed to {status}')
         return status
 
-    @commands.command()
-    async def test_command(self,ctx):
-        global status
-        global users
-        #IF Status is Local
-        if status == 'Local':
-            if ctx.user.id in users:
-                #ALLOW THE USERS' WHOS' ID IS IN THE LIST
-                pass
-            else:
-                #EXIT THE FUNCTION IF USER NOT IN THE LIST
-                return
-        #IF The status is Global
-        else:
-            #ALLOW THE COMMAND IF IT'S GLOBAL
-            pass
+    # @commands.command()
+    # async def test_command(self,ctx):
+    #     global status
+    #     global users
+    #     #IF Status is Local
+    #     if status == 'Local':
+    #         if ctx.user.id in users:
+    #             #ALLOW THE USERS' WHOS' ID IS IN THE LIST
+    #             pass
+    #         else:
+    #             #EXIT THE FUNCTION IF USER NOT IN THE LIST
+    #             return
+    #     #IF The status is Global
+    #     else:
+    #         #ALLOW THE COMMAND IF IT'S GLOBAL
+    #         pass
 
     @commands.command()
     @commands.check(IDCheck)
