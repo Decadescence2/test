@@ -8,7 +8,7 @@ from discord.ext import commands, tasks
 from itertools import cycle
 
 FFA = bool(True, False)
-print FFA
+print (FFA)
 
 client = commands.Bot(command_prefix = '~')
 client.remove_command('help')
