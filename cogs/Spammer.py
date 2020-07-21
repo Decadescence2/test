@@ -4,8 +4,6 @@ import os
 from itertools import cycle
 from discord.ext import commands
 
-FFA = False
-
 MyID = '<@339508544409829376>'
 VossID = '<@215985007326527488>'
 BaldwinID = '<@248950488731484161>'
@@ -28,33 +26,14 @@ class Spammers(commands.Cog):
         return ctx.message.author.id == 339508544409829376
 
     @commands.command()
-    async def ToggleFFA(ctx):
-        if FFA == False:
-            FFA = True
-            print (FFA)
-            await message.channel.send('Free For All mode: Enabled')
-        if FFA == True:
-            FFA = False
-            print (FFA)
-            await message.channel.send('Free For All mode: Disabled')
-
-    @commands.command()
+    @commands.check(IDCheck)
     async def SpamTest(self, ctx, *, question):
-        if FFA == False:
-            @commands.check(IDCheck)
-            spamnumber = 0
-            while spamnumber < int(question):
-                    await ctx.send('**LURKING!?** ' + MyID);
-                    await asyncio.sleep(1)
-                    spamnumber += 1
-                    print ({spamnumber})
-        if FFA == True:
-            spamnumber = 0
-            while spamnumber < int(question):
-                    await ctx.send('**LURKING!?** ' + MyID);
-                    await asyncio.sleep(1)
-                    spamnumber += 1
-                    print ({spamnumber})
+        spamnumber = 0
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + MyID);
+                await asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
 
 
     @commands.command()
