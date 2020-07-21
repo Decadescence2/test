@@ -26,14 +26,23 @@ class Spammers(commands.Cog):
         return ctx.message.author.id == 339508544409829376
 
     @commands.command()
-    @commands.check(IDCheck)
-    async def SpamTest(self, ctx, *, question):
-        spamnumber = 0
-        while spamnumber < int(question):
-                await ctx.send('**LURKING!?** ' + MyID);
-                await asyncio.sleep(1)
-                spamnumber += 1
-                print ({spamnumber})
+    if FFA = False:
+        @commands.check(IDCheck)
+        async def SpamTest(self, ctx, *, question):
+            spamnumber = 0
+            while spamnumber < int(question):
+                    await ctx.send('**LURKING!?** ' + MyID);
+                    await asyncio.sleep(1)
+                    spamnumber += 1
+                    print ({spamnumber})
+    if FFA = True:
+        async def SpamTest(self, ctx, *, question):
+            spamnumber = 0
+            while spamnumber < int(question):
+                    await ctx.send('**LURKING!?** ' + MyID);
+                    await asyncio.sleep(1)
+                    spamnumber += 1
+                    print ({spamnumber})
 
     @commands.command()
     @commands.check(IDCheck)
