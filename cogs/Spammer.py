@@ -3,6 +3,7 @@ import asyncio
 import os
 from itertools import cycle
 from discord.ext import commands
+from bot import FFA
 
 MyID = '<@339508544409829376>'
 VossID = '<@215985007326527488>'
