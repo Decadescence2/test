@@ -42,7 +42,13 @@ class Spammers(commands.Cog):
     async def SpamTest(self, ctx, *, question):
         if FFA == False:
             @commands.check(IDCheck)
-        else:
+            spamnumber = 0
+            while spamnumber < int(question):
+                    await ctx.send('**LURKING!?** ' + MyID);
+                    await asyncio.sleep(1)
+                    spamnumber += 1
+                    print ({spamnumber})
+        if FFA == True:
             spamnumber = 0
             while spamnumber < int(question):
                     await ctx.send('**LURKING!?** ' + MyID);
