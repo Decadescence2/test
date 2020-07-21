@@ -30,17 +30,17 @@ class Spammers(commands.Cog):
 
     @commands.command()
     async def SpamTest(self, ctx, *, question):
-    global status
-    global users
-    if status == 'Local':
-        if ctx.user.id in users:
-            pass
-            await ctx.send('User is moderator part works')
+        global status
+        global users
+        if status == 'Local':
+            if ctx.user.id in users:
+                pass
+                await ctx.send('User is moderator part works')
+            else:
+                return
         else:
-            return
-    else:
-        pass
-        await ctx.send('Status is set to global')
+            pass
+            await ctx.send('Status is set to global')
 
 
     @commands.is_owner()
