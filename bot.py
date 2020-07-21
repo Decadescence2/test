@@ -7,8 +7,6 @@ import random
 from discord.ext import commands, tasks
 from itertools import cycle
 
-FFA = False
-
 client = commands.Bot(command_prefix = '~')
 client.remove_command('help')
 
