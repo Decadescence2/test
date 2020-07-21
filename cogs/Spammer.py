@@ -36,7 +36,7 @@ class Spammers(commands.Cog):
             if ctx.user.id in users:
                 await ctx.send('User is moderator part works')
                 pass
-            else:
+            if ctx.user.id not in users:
                 await ctx.send('You dont have permission to use this command')
                 return
 
