@@ -7,6 +7,7 @@ import random
 from discord.ext import commands, tasks
 from itertools import cycle
 
+FFA = False
 
 client = commands.Bot(command_prefix = '~')
 client.remove_command('help')
@@ -63,6 +64,17 @@ async def on_message(message):
         if "gif" in message.content:
             responses = ['https://imgur.com/SFY00cc','https://imgur.com/l1isdSZ','https://imgur.com/XiST5sG','https://imgur.com/Q0c3E8c','https://imgur.com/YFwZgbl','https://imgur.com/vlkOGaf','https://imgur.com/aWyR7iX', 'https://imgur.com/8DjzVc5', 'https://imgur.com/ovOGXf8','https://imgur.com/8HMehnO','https://imgur.com/jvlfhzn','https://imgur.com/8KMJ6sr']
             await message.channel.send(random.choice(responses))
+
+@client.command()
+async def ToggleFFA(ctx):
+    if FFA = False:
+        FFA = True
+        print (FFA)
+        await message.channel.send('Free For All mode: Enabled')
+    if FFA = True:
+        FFA = False
+        print (FFA)
+        await message.channel.send('Free For All mode: Disabled')
 
 @client.command()
 async def Test(ctx):
