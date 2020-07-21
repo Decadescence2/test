@@ -29,15 +29,22 @@ class Spammers(commands.Cog):
         return ctx.message.author.id == 339508544409829376
 
     @commands.command()
-    @commands.check(IDCheck)
     async def SpamTest(self, ctx, *, question):
+    global status
+    global users
+    if status == 'Local':
+        if ctx.user.id in users:
+            pass
+        else:
+            return
+    else:
+        pass
         spamnumber = 0
         while spamnumber < int(question):
                 await ctx.send('**LURKING!?** ' + MyID);
                 await asyncio.sleep(1)
                 spamnumber += 1
                 print ({spamnumber})
-
 
     @commands.is_owner()
     @commands.command()
