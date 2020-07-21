@@ -34,12 +34,12 @@ class Spammers(commands.Cog):
         global users
         if status == 'Local':
             if ctx.user.id in users:
-                pass
                 await ctx.send('User is moderator part works')
+                pass
             else:
-                return
                 await ctx.send('You dont have permission to use this command')
-                
+                return
+
         else:
             pass
             await ctx.send('Status is set to global')
