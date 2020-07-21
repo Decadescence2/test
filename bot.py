@@ -71,8 +71,8 @@ async def ToggleFFA(ctx):
         FFA == int(1)
         print (FFA)
         await message.channel.send('Free For All mode: Enabled')
-    if FFA == int(1):
-        FFA == int(0)
+    if FFA == 1:
+        FFA == 0
         print (FFA)
         await message.channel.send('Free For All mode: Disabled')
 
