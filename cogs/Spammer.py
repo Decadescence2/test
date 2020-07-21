@@ -3,7 +3,8 @@ import asyncio
 import os
 from itertools import cycle
 from discord.ext import commands
-from bot import FFA
+
+FFA = False
 
 MyID = '<@339508544409829376>'
 VossID = '<@215985007326527488>'
@@ -25,6 +26,17 @@ class Spammers(commands.Cog):
         print ('Spammer Code Loaded')
     def IDCheck(ctx):
         return ctx.message.author.id == 339508544409829376
+
+    @commands.command()
+    async def ToggleFFA(ctx):
+        if FFA == False:
+            FFA = True
+            print (FFA)
+            await message.channel.send('Free For All mode: Enabled')
+        if FFA == True:
+            FFA = False
+            print (FFA)
+            await message.channel.send('Free For All mode: Disabled')
 
     @commands.command()
     if FFA == False:
