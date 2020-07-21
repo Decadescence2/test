@@ -7,7 +7,7 @@ import random
 from discord.ext import commands, tasks
 from itertools import cycle
 
-FFA = 0
+FFA = False
 
 client = commands.Bot(command_prefix = '~')
 client.remove_command('help')
@@ -67,12 +67,12 @@ async def on_message(message):
 
 @client.command()
 async def ToggleFFA(ctx):
-    if FFA = 0:
-        FFA += 1
+    if FFA == False:
+        FFA = True
         print (FFA)
         await message.channel.send('Free For All mode: Enabled')
-    if FFA = 1:
-        FFA =- 1
+    if FFA == True:
+        FFA = False
         print (FFA)
         await message.channel.send('Free For All mode: Disabled')
 
