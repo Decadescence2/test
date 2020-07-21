@@ -26,7 +26,7 @@ class Spammers(commands.Cog):
         return ctx.message.author.id == 339508544409829376
 
     @commands.command()
-    if FFA == int(0):
+    if FFA == 0:
         @commands.check(IDCheck)
         async def SpamTest(self, ctx, *, question):
             spamnumber = 0
@@ -35,7 +35,7 @@ class Spammers(commands.Cog):
                     await asyncio.sleep(1)
                     spamnumber += 1
                     print ({spamnumber})
-    if FFA == int(1):
+    if FFA == 1:
         async def SpamTest(self, ctx, *, question):
             spamnumber = 0
             while spamnumber < int(question):
