@@ -63,7 +63,7 @@ async def on_message(message):
             responses = ['https://imgur.com/SFY00cc','https://imgur.com/l1isdSZ','https://imgur.com/XiST5sG','https://imgur.com/Q0c3E8c','https://imgur.com/YFwZgbl','https://imgur.com/vlkOGaf','https://imgur.com/aWyR7iX', 'https://imgur.com/8DjzVc5', 'https://imgur.com/ovOGXf8','https://imgur.com/8HMehnO','https://imgur.com/jvlfhzn','https://imgur.com/8KMJ6sr']
             await message.channel.send(random.choice(responses))
 
-@Client.command(pass_context = True, aliases = ['Purge'])
+@client.command(pass_context = True, aliases = ['Purge'])
 async def purge (ctx, number):
     number = int(number) #Converting the amount of messages to delete to an integer
     counter = 0
