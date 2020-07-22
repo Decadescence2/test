@@ -96,7 +96,7 @@ class Spammers(commands.Cog):
     async def GhostTest(self, ctx, *, question):
         spamnumber = 0
         while spamnumber < int(question):
-                await ctx.send('**LURKING!?** ' + MyID, , delete_after=1);
+                await ctx.send('**LURKING!?** ' + MyID, delete_after=1);
                 asyncio.sleep(1)
                 spamnumber += 1
                 print ({spamnumber})
