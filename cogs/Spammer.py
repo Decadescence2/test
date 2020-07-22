@@ -96,12 +96,10 @@ class Spammers(commands.Cog):
     async def GhostTest(self, ctx, *, question):
         spamnumber = 0
         while spamnumber < int(question):
-                await ctx.send('**LURKING!?** ' + MyID);
+                await ctx.send('**LURKING!?** ' + MyID, delete_after=2);
                 asyncio.sleep(1)
                 spamnumber += 1
                 print ({spamnumber})
-                await ctx.message.delete()
-                asyncio.sleep(0.5)
                 await ctx.message.delete()
 
     @commands.command()
@@ -114,6 +112,17 @@ class Spammers(commands.Cog):
                 spamnumber += 1
                 print ({spamnumber})
 
+    @commands.command()
+    @commands.check(IDCheck)
+    async def LimitTest(self, ctx, *, question):
+        spamnumber = 0
+        if int(question) > 5:
+            int(question) = 5
+        while spamnumber < int(question):
+                await ctx.send('**LURKING!?** ' + MyID);
+                asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
 
     @commands.command()
     @commands.check(IDCheck)
