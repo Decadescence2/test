@@ -101,6 +101,8 @@ class Spammers(commands.Cog):
                 spamnumber += 1
                 print ({spamnumber})
                 await ctx.message.delete()
+                asyncio.sleep(0.5)
+                await ctx.message.delete()
 
     @commands.command()
     @commands.check(IDCheck)
