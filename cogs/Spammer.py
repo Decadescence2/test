@@ -100,7 +100,7 @@ class Spammers(commands.Cog):
                 asyncio.sleep(1)
                 spamnumber += 1
                 print ({spamnumber})
-                await message.delete(2)
+                await ctx.message.delete()
 
     @commands.command()
     @commands.check(IDCheck)
