@@ -1,3 +1,9 @@
+import discord
+import asyncio
+import os
+from itertools import cycle
+from discord.ext import commands
+
 class GhostPings(commands.Cog):
 
     def __init__(self, client):
