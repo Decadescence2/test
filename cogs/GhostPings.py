@@ -28,5 +28,39 @@ class GhostPings(commands.Cog):
         await ctx.send(MyID3, delete_after=2);
         await ctx.message.delete()
 
+    @commands.command()
+    async def GhostVoss(self, ctx):
+        await ctx.send(VossID3, delete_after=2);
+        await ctx.message.delete()
+
+    @commands.command()
+    async def GhostJay(self, ctx):
+        await ctx.send(JayID3, delete_after=2);
+        await ctx.message.delete()
+
+    @commands.command()
+    async def GhostConnor(self, ctx):
+        await ctx.send(ConnorID3, delete_after=2);
+        await ctx.message.delete()
+
+    @commands.command()
+    async def GhostAaron(self, ctx):
+        await ctx.send(AaronID3, delete_after=2);
+        await ctx.message.delete()
+
+    @commands.command()
+    async def GhostNiall(self, ctx):
+        await ctx.send(NiallID3, delete_after=2);
+        await ctx.message.delete()
+
+    @commands.command()
+    async def GhostPete(self, ctx):
+        await ctx.send(PeteID3, delete_after=2);
+        await ctx.message.delete()
+
+    async def GhostSimon(self, ctx):
+        await ctx.send(SimonID3, delete_after=2);
+        await ctx.message.delete()
+
 def setup(client):
     client.add_cog(GhostPings(client))
