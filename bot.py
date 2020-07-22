@@ -69,7 +69,7 @@ async def purge (ctx, number):
     counter = 0
     async for x in Client.logs_from(ctx.message.channel, limit = number):
         if counter < number:
-            await message.delete(x)
+            await ctx.message.delete(x)
             counter += 1
             await asyncio.sleep(1.2)
 
