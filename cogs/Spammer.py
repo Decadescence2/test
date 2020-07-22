@@ -123,7 +123,7 @@ class Spammers(commands.Cog):
         spamnumber = 0
         limit = 5
         if int(question) > 5:
-            await ctx.send('**Command has a limit of 5 pings**', delete_after=5')
+            await ctx.send('**Command has a limit of 5 pings**', delete_after=5)
             while spamnumber < 5:
                 await ctx.send('**LURKING!?** ' + NiallID);
                 asyncio.sleep(1)
@@ -142,7 +142,7 @@ class Spammers(commands.Cog):
         spamnumber = 0
         limit = 5
         if int(question) > 5:
-            await ctx.send('**Command has a limit of 5 pings**', delete_after=5')
+            await ctx.send('**Command has a limit of 5 pings**', delete_after=5)
             while spamnumber < 5:
                 await ctx.send('**LURKING!?** ' + AaronID);
                 asyncio.sleep(1)
@@ -161,7 +161,7 @@ class Spammers(commands.Cog):
         spamnumber = 0
         limit = 5
         if int(question) > 5:
-            await ctx.send('**Command has a limit of 5 pings**', delete_after=5')
+            await ctx.send('**Command has a limit of 5 pings**', delete_after=5)
             while spamnumber < 5:
                 await ctx.send('**LURKING!?** ' + ConnorID);
                 asyncio.sleep(1)
@@ -179,7 +179,7 @@ class Spammers(commands.Cog):
         spamnumber = 0
         limit = 5
         if int(question) > 5:
-            await ctx.send('**Command has a limit of 5 pings**', delete_after=5')
+            await ctx.send('**Command has a limit of 5 pings**', delete_after=5)
             while spamnumber < 5:
                 await ctx.send('**LURKING!?** ' + JayID);
                 asyncio.sleep(1)
@@ -197,7 +197,7 @@ class Spammers(commands.Cog):
         spamnumber = 0
         limit = 5
         if int(question) > 5:
-            await ctx.send('**Command has a limit of 5 pings**', delete_after=5')
+            await ctx.send('**Command has a limit of 5 pings**', delete_after=5)
             while spamnumber < 5:
                 await ctx.send('**LURKING!?** ' + BaldwinID);
                 asyncio.sleep(1)
@@ -215,7 +215,7 @@ class Spammers(commands.Cog):
         spamnumber = 0
         limit = 5
         if int(question) > 5:
-            await ctx.send('**Command has a limit of 5 pings**', delete_after=5')
+            await ctx.send('**Command has a limit of 5 pings**', delete_after=5)
             while spamnumber < 5:
                 await ctx.send('**LURKING!?** ' + VossID);
                 asyncio.sleep(1)
