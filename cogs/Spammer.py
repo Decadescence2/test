@@ -116,9 +116,15 @@ class Spammers(commands.Cog):
     @commands.check(IDCheck)
     async def LimitTest(self, ctx, *, question):
         spamnumber = 0
-        if int(question) > 5:
-            int(question) = 5
-        while spamnumber < int(question):
+        limit = 5
+        if int(question) < 5:
+            while spamnumber < 5:
+                await ctx.send('**LURKING!?** ' + MyID);
+                asyncio.sleep(1)
+                spamnumber += 1
+                print ({spamnumber})
+        else:
+            while spamnumber < int(question):
                 await ctx.send('**LURKING!?** ' + MyID);
                 asyncio.sleep(1)
                 spamnumber += 1
