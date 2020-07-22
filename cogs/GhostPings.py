@@ -26,7 +26,7 @@ class GhostPings(commands.Cog):
         return ctx.message.author.id == 339508544409829376
 
     @commands.command()
-    @commmands.check(IDCheck)
+    @commands.check(IDCheck)
     async def GhostTest(self, ctx):
         await ctx.send(MyID3, delete_after=2);
         await ctx.message.delete()

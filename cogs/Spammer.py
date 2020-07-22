@@ -82,7 +82,6 @@ class Spammers(commands.Cog):
     #         pass
 
     @commands.command()
-    @commands.check(IDCheck)
     async def SpamSimon(self, ctx, *, question):
         spamnumber = 0
         limit = 5
