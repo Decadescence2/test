@@ -22,8 +22,11 @@ class GhostPings(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print ('GhostPing file Loaded')
+    def IDCheck(ctx):
+        return ctx.message.author.id == 339508544409829376
 
     @commands.command()
+    @commmands.check(IDCheck)
     async def GhostTest(self, ctx):
         await ctx.send(MyID3, delete_after=2);
         await ctx.message.delete()
