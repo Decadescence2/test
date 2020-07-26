@@ -15,6 +15,12 @@ class Test_Commands(commands.Cog):
     async def on_ready(self):
         print ('Test Command File Loaded')
 
+    text_channel_list = []
+    for guild in bot.guilds:
+        for channel in guild.text_channels:
+            text_channel_list.append(channel)
+            print(text_channel_list)
+
     @commands.command(aliases = ['8Ball', '8ball'])
     async def _8Ball(self, ctx, *, question):
         responses = ['As I see it, yes',
