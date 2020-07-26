@@ -15,12 +15,17 @@ Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game D
             , 'Dont Starve IRL', '~']
 
 @client.command()
-async def Channels(ctx, extension):
+async def Channels(ctx):
     text_channel_list = []
     for guild in client.guilds:
         for channel in guild.text_channels:
             text_channel_list.append(channel)
             await ctx.send(text_channel_list)
+@client.command()
+async def send_all(ctx, message, member):
+    for channel in client.get_all_channels()
+        if channel.permissions_for(member):
+             await ctx.send(channel, message)
 
 @client.command()
 async def Load(ctx, extension):
