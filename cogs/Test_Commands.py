@@ -40,6 +40,14 @@ class Test_Commands(commands.Cog):
 
 
     @commands.command(pass_context = True)
+    async def Chicago(self, ctx):
+        await ctx.send('-p Sweet home chicago')
+
+    @commands.command(pass_context = True)
+    async def Donut(self, ctx, aliases = ['donut']):
+        await ctx.send('https://imgur.com/Z7T1Gh5')
+
+    @commands.command(pass_context = True)
     async def Help(self, ctx):
         author = ctx.message.author
 
@@ -51,7 +59,7 @@ class Test_Commands(commands.Cog):
         embed.add_field(name='Spam Commands - Limit is 5 pings', value='SpamVoss(x)\nSpamBaldwin(x)\nSpamJay(x)\nSpamSimon(X)\nSpamConnor(x)\nSpamAaron(x)\nSpamNiall(x)\nSpamPete(x)',inline=False)
         embed.add_field(name='MegaSpam Commands', value='MSVoss\nMSBaldwin\nMSJay\nMSConnor',inline=False)
         embed.add_field(name='Ghost Ping Commands', value='GhostVoss\nGhostBaldwin\nGhostJay\nGhostConnor\nGhostSimon\nGhostPete\nGhostAaron\nGhostNiall',inline=False)
-        embed.add_field(name='Random Commands', value='8Ball',inline=False)
+        embed.add_field(name='Random Commands', value='8Ball\nChicago\nDonut',inline=False)
         embed.add_field(name='Admin Commands', value='Load (cog_name)\nUnload (cog_name)\nReload (cog_name)\n', inline=False)
 
         await author.send(embed=embed)
