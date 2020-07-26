@@ -16,7 +16,7 @@ class Test_Commands(commands.Cog):
         print ('Test Command File Loaded')
 
     text_channel_list = []
-    for guild in bot.guilds:
+    for guild in client.guilds:
         for channel in guild.text_channels:
             text_channel_list.append(channel)
             print(text_channel_list)
