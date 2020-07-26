@@ -10,16 +10,9 @@ class Test_Commands(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-
     @commands.Cog.listener()
     async def on_ready(self):
         print ('Test Command File Loaded')
-
-    text_channel_list = []
-    for guild in client.guilds:
-        for channel in guild.text_channels:
-            text_channel_list.append(channel)
-            print(text_channel_list)
 
     @commands.command(aliases = ['8Ball', '8ball'])
     async def _8Ball(self, ctx, *, question):
