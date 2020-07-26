@@ -7,7 +7,7 @@ import random
 from discord.ext import commands, tasks
 from itertools import cycle
 
-client = commands.Bot(command_prefix = '~')
+client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
 
 Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game Dies',
