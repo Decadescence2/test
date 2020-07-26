@@ -28,59 +28,6 @@ class Spammers(commands.Cog):
     def IDCheck(ctx):
         return ctx.message.author.id == 339508544409829376
 
-    # @commands.command()
-    # async def SpamTest(self, ctx, *, question):
-    #     global status
-    #     global users
-    #     if status == 'Local':
-    #         if ctx.user.id in users:
-    #             await ctx.send('User is moderator part works')
-    #             pass
-    #         if ctx.user.id not in users:
-    #             await ctx.send('You dont have permission to use this command')
-    #             return
-    #
-    #     else:
-    #         pass
-    #         await ctx.send('Status is set to global')
-    #
-    #
-    # @commands.is_owner()
-    # @commands.command()
-    # async def add_user(self,ctx,user:discord.User):
-    #     global users
-    #     id = user.id
-    #     await ctx.send(f'{user.name} has been added into the mod list.')
-    #     return users.append(id)
-    #
-    # @commands.is_owner()
-    # @commands.command()
-    # async def change_status(self,ctx):
-    #     global status
-    #     if status == 'Global':
-    #         status = 'Local'
-    #     elif status == 'Local':
-    #         status = 'Global'
-    #     await ctx.send(f'Status has been changed to {status}')
-    #     return status
-
-    # @commands.command()
-    # async def test_command(self,ctx):
-    #     global status
-    #     global users
-    #     #IF Status is Local
-    #     if status == 'Local':
-    #         if ctx.user.id in users:
-    #             #ALLOW THE USERS' WHOS' ID IS IN THE LIST
-    #             pass
-    #         else:
-    #             #EXIT THE FUNCTION IF USER NOT IN THE LIST
-    #             return
-    #     #IF The status is Global
-    #     else:
-    #         #ALLOW THE COMMAND IF IT'S GLOBAL
-    #         pass
-
     @commands.command()
     async def SpamSimon(self, ctx, *, question):
         spamnumber = 0

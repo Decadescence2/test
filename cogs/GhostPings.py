@@ -42,6 +42,11 @@ class GhostPings(commands.Cog):
         await ctx.message.delete()
 
     @commands.command()
+    async def GhostJay(self, ctx):
+        await ctx.send(BaldwinID3, delete_after=2);
+        await ctx.message.delete()
+
+    @commands.command()
     async def GhostConnor(self, ctx):
         await ctx.send(ConnorID3, delete_after=2);
         await ctx.message.delete()
