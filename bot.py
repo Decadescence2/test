@@ -23,9 +23,9 @@ async def Channels(ctx):
             await ctx.send(text_channel_list)
 @client.command()
 async def send_all(ctx, message, member):
-    for channel in client.get_all_channels()
+    for channel in client.get_all_channels():
         if channel.permissions_for(member):
-             await ctx.send(channel, message)
+            await ctx.send(channel, message)
 
 @client.command()
 async def Load(ctx, extension):
