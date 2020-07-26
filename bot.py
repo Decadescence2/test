@@ -14,6 +14,12 @@ Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game D
             'With My Amazing Headset', 'UNO.', 'With My Fallout Strap On Mod', 'Speaking Over Niall'
             , 'Dont Starve IRL', '~']
 
+text_channel_list = []
+for guild in client.guilds:
+    for channel in guild.text_channels:
+        text_channel_list.append(channel)
+        print(text_channel_list)
+
 @client.command()
 async def Load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
