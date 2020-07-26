@@ -15,7 +15,7 @@ Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game D
             , 'Dont Starve IRL', '~']
 
 text_channel_list = []
-for guild in client.guilds:
+for guild in Bot.guilds:
     for channel in guild.text_channels:
         text_channel_list.append(channel)
         print(text_channel_list)
