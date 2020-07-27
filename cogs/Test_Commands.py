@@ -47,9 +47,9 @@ class Test_Commands(commands.Cog):
     async def flip(self,ctx):
         result = int(randrange(100))
         if result < 50:
-            await ctx.send('Result was: Heads', 'https://imgur.com/FwRaaWl')
+            await ctx.send(f'Result was: Heads', 'https://imgur.com/FwRaaWl')
         else:
-            await ctx.send('Result was: Tails', 'https://imgur.com/Ws45RU5')
+            await ctx.send(f'Result was: Tails', 'https://imgur.com/Ws45RU5')
 
 
     @commands.command(pass_context = True)
