@@ -23,5 +23,5 @@ class SiegeCommands(commands.Cog):
         await message.channel.send(random.choice(maps))
 
 
-    def setup(client):
-        client.add_cog(SiegeCommands(client))
+def setup(client):
+    client.add_cog(SiegeCommands(client))
