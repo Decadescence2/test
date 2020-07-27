@@ -4,6 +4,7 @@ import os
 import random
 from itertools import cycle
 from discord.ext import commands
+from random import randrange
 
 class Test_Commands(commands.Cog):
 
@@ -41,6 +42,15 @@ class Test_Commands(commands.Cog):
     @commands.command(pass_context = True, aliases = ['donut'])
     async def Donut(self, ctx):
         await ctx.send('https://imgur.com/Z7T1Gh5')
+
+    @commands.command(pass_context = True)
+    async def flip(self,ctx):
+        result = int(randrange(100))
+        if result < 50:
+            await ctx.send('Result was: Heads')
+        else:
+            await ctx.send('Result was: Tails')
+
 
     @commands.command(pass_context = True, aliases = ['help'])
     async def Help(self, ctx):
