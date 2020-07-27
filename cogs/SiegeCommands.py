@@ -19,7 +19,7 @@ class SiegeCommands(commands.Cog):
         maps = ['**Bank**','**Bartlett University**','**Chalet**','**Clubhouse**','**Consulate**','**Hereford Base**',
         '**House**','**Kafe Dostoyevsky**','**Kanal**','**Oregon**','**Outback**','**Presidential Plane**',
         '**Yacht**','**Border**','**Favela**','**Fortress**','**Skyscraper**','**Coastline**','**Villa**','**Theme Park**']
-        await ctx.send(f'You are playing: {random.choice(maps)})
+        await ctx.send(f'You are playing: {random.choice(maps)}')
 
 
 def setup(client):
