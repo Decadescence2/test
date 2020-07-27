@@ -15,7 +15,7 @@ class Test_Commands(commands.Cog):
     async def on_ready(self):
         print ('Test Command File Loaded')
 
-    @commands.command(aliases = ['8Ball', '8ball'])
+    @commands.command()
     async def _8Ball(self, ctx, *, question):
         responses = ['As I see it, yes',
                      'Ask again later',
@@ -39,7 +39,7 @@ class Test_Commands(commands.Cog):
                      'You may rely on it.']
         await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
 
-    @commands.command(pass_context = True, aliases = ['donut'])
+    @commands.command(pass_context = True)
     async def Donut(self, ctx):
         await ctx.send('https://imgur.com/Z7T1Gh5')
 
@@ -52,7 +52,7 @@ class Test_Commands(commands.Cog):
             await ctx.send('Result was: Tails')
 
 
-    @commands.command(pass_context = True, aliases = ['help'])
+    @commands.command(pass_context = True)
     async def Help(self, ctx):
         author = ctx.message.author
 
