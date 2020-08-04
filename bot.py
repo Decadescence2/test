@@ -116,9 +116,9 @@ async def called_once_a_week():
 #     await bot.wait_until_ready()
 #     print("Finished waiting")
 
-@client.command()
-async def Test(ctx):
-    await ctx.send('working')
+# @client.command()
+# async def Test(ctx):
+#     await ctx.send('working')
 
 called_once_a_week.start()
 client.loop.create_task(change_status())
