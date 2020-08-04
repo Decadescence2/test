@@ -132,7 +132,7 @@ class donuts(commands.Cog):
 
         await ctx.send(embed=embed)
 
-called_once_a_week.start()
 
 def setup(client):
     client.add_cog(donuts(client))
+    called_once_a_week.start()
