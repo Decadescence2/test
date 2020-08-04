@@ -42,8 +42,7 @@ class donuts(commands.Cog):
             colour = discord.Colour.blue()
         )
 
-        embed.set_author(name='Donut Leaderboard')
-        embed.set_thunbnail(url='https://www.theflavorbender.com/wp-content/uploads/2014/09/Simpsons-Doughnuts-4238-Copy-1.jpg')
+        embed.set_author(name='Donut Leaderboard', icon_url='https://www.theflavorbender.com/wp-content/uploads/2014/09/Simpsons-Doughnuts-4238-Copy-1.jpg')
         embed.add_field(name='Voss: ', value=('{}'.format(Voss)),inline=False)
         embed.add_field(name='Ash: ', value=('{}'.format(Ash)),inline=False)
         embed.add_field(name='Jay: ', value=('{}'.format(Jay)),inline=False)
