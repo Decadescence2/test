@@ -92,7 +92,31 @@ target_channel_id = 523703758564360197
 async def called_once_a_week():
     message_channel = client.get_channel(target_channel_id)
     print(f"Got channel {message_channel}")
-    await message_channel.send("reset")
+    await message_channel.send("Donuts Reset")
+    global Niall
+    global Voss
+    global Connor
+    global Baldwin
+    global Ash
+    global Pete
+    global Jay
+    global Aaron
+    Niall = 0
+    Voss = 0
+    Connor = 0
+    Baldwin = 0
+    Jay = 0
+    Ash = 0
+    Pete = 0
+    Aaron = 0
+    return Niall
+    return Voss
+    return Connor
+    return Baldwin
+    return Ash
+    return Pete
+    return Jay
+    return Aaron
 
 @called_once_a_week.before_loop
 async def before():
