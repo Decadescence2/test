@@ -31,14 +31,14 @@ class donuts(commands.Cog):
 
     @commands.command(pass_context = True)
     async def DonutLeaderboard(self, ctx):
-        await ctx.send('Baldwin: ' + Baldwin)
-        await ctx.send('Voss: ' + Voss)
-        await ctx.send('Ash: ' + Ash)
-        await ctx.send('Jay: ' + Jay)
-        await ctx.send('Aaron: ' + Aaron)
-        await ctx.send('Connor: ' + Connor)
-        await ctx.send('Pete: ' + Pete)
-        await ctx.send('Niall: ' + Niall)
+        await ctx.send('Baldwin: ' + Baldwin);
+        await ctx.send('Voss: ' + Voss);
+        await ctx.send('Ash: ' + Ash);
+        await ctx.send('Jay: ' + Jay);
+        await ctx.send('Aaron: ' + Aaron);
+        await ctx.send('Connor: ' + Connor);
+        await ctx.send('Pete: ' + Pete);
+        await ctx.send('Niall: ' + Niall);
 
 
 
