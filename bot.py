@@ -108,7 +108,7 @@ async def called_once_a_week():
     Ash = 0
     Pete = 0
     Aaron = 0
-    await channel.send('Reset')
+    await message_channel.send('Reset')
     return Niall
     return Voss
     return Connor
