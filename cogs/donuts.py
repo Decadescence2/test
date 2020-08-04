@@ -28,57 +28,85 @@ class donuts(commands.Cog):
     async def AddDonutVoss(self, ctx):
         global Voss
         Voss += 1
-        await ctx.send('https://imgur.com/Z7T1Gh5')
+        await ctx.send('Donut Added')
         return Voss
 
     @commands.command(pass_context = True)
     async def AddDonutJay(self, ctx):
         global Jay
         Jay += 1
+        await ctx.send('Donut Added')
         return Jay
-        await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
     async def AddDonutBaldwin(self, ctx):
         global Baldwin
         Baldwin += 1
+        await ctx.send('Donut Added')
         return Baldwin
-        await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
     async def AddDonutAsh(self, ctx):
         global Ash
         Ash += 1
+        await ctx.send('Donut Added')
         return Ash
-        await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
     async def AddDonutConnor(self, ctx):
         global Connor
         Connor += 1
+        await ctx.send('Donut Added')
         return Connor
-        await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
     async def AddDonutAaron(self, ctx):
         global Aaron
         Aaron += 1
+        await ctx.send('Donut Added')
         return Aaron
-        await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
     async def AddDonutPete(self, ctx):
         global Pete
         Pete += 1
+        await ctx.send('Donut Added')
         return Pete
-        await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
     async def AddDonutNiall(self, ctx):
         global Niall
         Niall += 1
+        await ctx.send('Donut Added')
         return Niall
-        await ctx.send('https://imgur.com/Z7T1Gh5')
+
+    @commands.command(pass_context = True)
+    async def AddDonutNiall(self, ctx):
+        global Niall
+        global Voss
+        global Connor
+        global Baldwin
+        global Ash
+        global Pete
+        global Jay
+        global Aaron
+        Niall = 0
+        Voss = 0
+        Connor = 0
+        Baldwin = 0
+        Jay = 0
+        Ash = 0
+        Pete = 0
+        Aaron = 0
+        await ctx.send('Donuts Reset')
+        return Niall
+        return Voss
+        return Connor
+        return Baldwin
+        return Ash
+        return Pete
+        return Jay
+        return Aaron
 
 
 
