@@ -5,14 +5,14 @@ from itertools import cycle
 from discord.ext import commands
 
 #donuts
-Baldwin = 0
-Ash = 0
-Voss = 0
-Jay = 0
-Connor = 0
-Aaron = 0
-Pete = 0
-Niall = 0
+Baldwin = int(0)
+Ash = int(0)
+Voss = int(0)
+Jay = int(0)
+Connor = int(0)
+Aaron = int(0)
+Pete = int(0)
+Niall = int(0)
 
 
 class donuts(commands.Cog):
@@ -26,7 +26,7 @@ class donuts(commands.Cog):
 
     @commands.command(pass_context = True)
     async def AddDonutVoss(self, ctx):
-        Voss =+ 1
+        Voss += 1
         await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
@@ -38,7 +38,7 @@ class donuts(commands.Cog):
         await ctx.send(Aaron)
         await ctx.send(Connor)
         await ctx.send(Pete)
-        await ctx.send(Niall)         
+        await ctx.send(Niall)
 
 
 
