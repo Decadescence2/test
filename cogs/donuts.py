@@ -5,14 +5,14 @@ from itertools import cycle
 from discord.ext import commands, tasks
 
 #donuts
-Baldwin = int(0)
-Ash = int(0)
-Voss = 0
-Jay = int(0)
-Connor = int(0)
-Aaron = int(0)
-Pete = int(0)
-Niall = int(0)
+# Baldwin = int(0)
+# Ash = int(0)
+# Voss = 0
+# Jay = int(0)
+# Connor = int(0)
+# Aaron = int(0)
+# Pete = int(0)
+# Niall = int(0)
 
 
 
