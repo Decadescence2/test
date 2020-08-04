@@ -17,9 +17,9 @@ Aaron = int(0)
 Pete = int(0)
 Niall = int(0)
 
-target_channel_id = 523703758564360197
-
-bg_task = asyncio.loop.create_task(Reset())
+# target_channel_id = 523703758564360197
+#
+# bg_task = asyncio.loop.create_task(Reset())
 
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
@@ -110,20 +110,20 @@ async def on_message(message):
             await message.channel.send(random.choice(responses))
 
 
-async def Reset(ctx):
-    await client.wait_until_ready()
-    counter = 0
-    channel = client.get_channel(target_channel_id) # channel ID goes here
-    while not client.is_closed():
-        await channel.send('Reset')
-        await asyncio.sleep(20) # task runs every 60 seconds
-        await ctx.invoke(client.get_command('Resetdonuts'))
+# async def Reset(ctx):
+#     await client.wait_until_ready()
+#     counter = 0
+#     channel = client.get_channel(target_channel_id) # channel ID goes here
+#     while not client.is_closed():
+#         await channel.send('Reset')
+#         await asyncio.sleep(20) # task runs every 60 seconds
+#         await ctx.invoke(client.get_command('Resetdonuts'))
 
 
 @client.command()
 async def Test(ctx):
     await ctx.send('working')
 
-called_once_a_week.start()
+# called_once_a_week.start()
 client.loop.create_task(change_status())
 client.run(os.environ['token'])
