@@ -33,7 +33,7 @@ class donuts(commands.Cog):
 
     @commands.command(pass_context = True)
     async def Leaderboard(self, ctx):
-        await ctx.send('Voss: {}'.format(Voss), 'Ash: {}'.format(Ash), 'Jay: {}'.format(Jay))
+        await ctx.send('Voss: {}'.format(Voss), + 'Ash: {}'.format(Ash), + 'Jay: {}'.format(Jay))
         # await ctx.send('Voss: ' + Voss);
         # await ctx.send('Ash: ' + Ash);
         # await ctx.send('Jay: ' + Jay);
