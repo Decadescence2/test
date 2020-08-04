@@ -19,6 +19,8 @@ Niall = int(0)
 
 target_channel_id = 523703758564360197
 
+bg_task = loop.create_task(Reset())
+
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
 
@@ -107,17 +109,16 @@ async def on_message(message):
             responses = ['https://imgur.com/SnGm07p', 'https://imgur.com/xUcha8d''https://imgur.com/SFY00cc','https://imgur.com/l1isdSZ','https://imgur.com/XiST5sG','https://imgur.com/Q0c3E8c','https://imgur.com/YFwZgbl','https://imgur.com/vlkOGaf','https://imgur.com/aWyR7iX', 'https://imgur.com/8DjzVc5', 'https://imgur.com/ovOGXf8','https://imgur.com/8HMehnO','https://imgur.com/jvlfhzn','https://imgur.com/8KMJ6sr']
             await message.channel.send(random.choice(responses))
 
-@tasks.loop(seconds=30)
-async def called_once_a_week(ctx):
-    message_channel = client.get_channel(target_channel_id)
-    print(f"Got channel {message_channel}")
-    await message_channel.send("reset")
-    await ctx.invoke(client.get_command('Resetdonuts'))
 
-@called_once_a_week.before_loop
-async def before():
+async def Reset(ctx):
     await client.wait_until_ready()
-    print("Finished waiting")
+    counter = 0
+    channel = client.get_channel(target_channel_id) # channel ID goes here
+    while not client.is_closed():
+        counter += 1
+        await channel.send(counter)
+        await asyncio.sleep(20) # task runs every 60 seconds
+        await ctx.invoke(client.get_command('Resetdonuts'))
 
 
 @client.command()
