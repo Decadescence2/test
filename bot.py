@@ -92,7 +92,7 @@ async def on_message(message):
 async def called_once_a_week():
     message_channel = client.get_channel(target_channel_id)
     print(f"Got channel {message_channel}")
-        await ctx.invoke(client.get_command('Resetdonuts')
+    await ctx.invoke(client.get_command('Resetdonuts')
     # global Niall
     # global Voss
     # global Connor
