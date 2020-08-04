@@ -30,7 +30,7 @@ class donuts(commands.Cog):
     async def AddDonutVoss(self, ctx):
         global Voss
         Voss += 1
-        await ctx.send(f'Donut Added, Mans now dropped ', Voss, ' donuts')
+        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(Voss))
         return Voss
 
     @commands.command(pass_context = True)
