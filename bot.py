@@ -93,14 +93,6 @@ async def called_once_a_week():
     message_channel = client.get_channel(target_channel_id)
     print(f"Got channel {message_channel}")
     await message_channel.send("reset")
-    await Resetdonuts
-
-@called_once_a_week.before_loop
-async def before():
-    await client.wait_until_ready()
-    print("Finished waiting")
-
-async def Resetdonuts(ctx):
     global Niall
     global Voss
     global Connor
@@ -117,7 +109,13 @@ async def Resetdonuts(ctx):
     Ash = 0
     Pete = 0
     Aaron = 0
-    await ctx.send('Donuts Reset')
+
+@called_once_a_week.before_loop
+async def before():
+    await client.wait_until_ready()
+    print("Finished waiting")
+
+
 
 @client.command()
 async def Test(ctx):
