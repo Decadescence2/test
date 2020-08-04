@@ -80,8 +80,13 @@ class donuts(commands.Cog):
         await ctx.send('Donut Added')
         return Niall
 
-    @commands.command(pass_context = True)
-    async def Resetdonuts(self, ctx):
+        target_channel_id = 523703758564360197
+
+    @tasks.loop(seconds=30)
+    async def called_once_a_week():
+        message_channel = client.get_channel(target_channel_id)
+        print(f"Got channel {message_channel}")
+        await message_channel.send("reset")
         global Niall
         global Voss
         global Connor
@@ -98,19 +103,11 @@ class donuts(commands.Cog):
         Ash = 0
         Pete = 0
         Aaron = 0
-        await ctx.send('Donuts Reset')
-        return Niall
-        return Voss
-        return Connor
-        return Baldwin
-        return Ash
-        return Pete
-        return Jay
-        return Aaron
 
-
-
-
+    @called_once_a_week.before_loop
+    async def before():
+        await client.wait_until_ready()
+        print("Finished waiting")
 
     # @commands.command(pass_context = True)
     # async def Leaderboard(self, ctx):
