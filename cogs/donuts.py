@@ -19,6 +19,7 @@ class donuts(commands.Cog):
 
     def __init__(self, client):
         self.client = client
+        self.called_once_a_week.start()
 
     @commands.Cog.listener()
     async def on_ready(self):
@@ -132,7 +133,6 @@ class donuts(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    self.called_once_a_week.start()
 
 def setup(client):
     client.add_cog(donuts(client))
