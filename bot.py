@@ -19,7 +19,7 @@ Niall = int(0)
 
 target_channel_id = 523703758564360197
 
-bg_task = client.loop.create_task(Reset())
+bg_task = asyncio.loop.create_task(Reset())
 
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
