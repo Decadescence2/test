@@ -6,7 +6,7 @@ import random
 
 from discord.ext import commands, tasks
 from itertools import cycle
-from donuts import Resetdonuts
+
 
 Baldwin = int(0)
 Ash = int(0)
@@ -79,6 +79,25 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
         await ctx.send('You do not have permission to use this command')
 
+@client.command(pass_context = True)
+async def Resetdonuts(ctx):
+    global Niall
+    global Voss
+    global Connor
+    global Baldwin
+    global Ash
+    global Pete
+    global Jay
+    global Aaron
+    Niall = 0
+    Voss = 0
+    Connor = 0
+    Baldwin = 0
+    Jay = 0
+    Ash = 0
+    Pete = 0
+    Aaron = 0
+
 @client.event
 async def on_message(message):
     await client.process_commands(message)
@@ -99,6 +118,7 @@ async def called_once_a_week(pass_context = True):
 async def before():
     await client.wait_until_ready()
     print("Finished waiting")
+
 
 @client.command()
 async def Test(ctx):
