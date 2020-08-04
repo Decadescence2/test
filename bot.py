@@ -8,6 +8,15 @@ from discord.ext import commands, tasks
 from itertools import cycle
 # from donuts import *
 
+Baldwin = int(0)
+Ash = int(0)
+Voss = 0
+Jay = int(0)
+Connor = int(0)
+Aaron = int(0)
+Pete = int(0)
+Niall = int(0)
+
 target_channel_id = 523703758564360197
 
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
