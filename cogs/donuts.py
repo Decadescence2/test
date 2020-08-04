@@ -7,7 +7,7 @@ from discord.ext import commands
 #donuts
 Baldwin = int(0)
 Ash = int(0)
-Voss = int(0)
+Voss = 0
 Jay = int(0)
 Connor = int(0)
 Aaron = int(0)
@@ -33,7 +33,7 @@ class donuts(commands.Cog):
 
     @commands.command(pass_context = True)
     async def Leaderboard(self, ctx):
-        await ctx.send('Voss: ' + Voss)
+        await ctx.send('Voss: ', Voss)
         # await ctx.send('Voss: ' + Voss);
         # await ctx.send('Ash: ' + Ash);
         # await ctx.send('Jay: ' + Jay);
