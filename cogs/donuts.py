@@ -32,11 +32,64 @@ class donuts(commands.Cog):
         await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
-    async def Leaderboard(self, ctx):
-        await ctx.send('Voss: {}\nAsh: {}\nJay: {}\nAaron: {}\nConnor: {}\nPete: {}\nNiall: {}\nBaldwin: {}'.format(Voss, Ash, Jay, Aaron, Connor, Pete, Niall, Baldwin))
+    async def AddDonutJay(self, ctx):
+        global Jay
+        Jay += 1
+        return Jay
+        await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
-    async def embedtest(self, ctx):
+    async def AddDonutBaldwin(self, ctx):
+        global Baldwin
+        Baldwin += 1
+        return Badlwin
+        await ctx.send('https://imgur.com/Z7T1Gh5')
+
+    @commands.command(pass_context = True)
+    async def AddDonutAsh(self, ctx):
+        global Ash
+        Ash += 1
+        return Ash
+        await ctx.send('https://imgur.com/Z7T1Gh5')
+
+    @commands.command(pass_context = True)
+    async def AddDonutConnor(self, ctx):
+        global Connor
+        Connor += 1
+        return Connor
+        await ctx.send('https://imgur.com/Z7T1Gh5')
+
+    @commands.command(pass_context = True)
+    async def AddDonutAaron(self, ctx):
+        global Aaron
+        Aaron += 1
+        return Aaron
+        await ctx.send('https://imgur.com/Z7T1Gh5')
+
+    @commands.command(pass_context = True)
+    async def AddDonutPete(self, ctx):
+        global Pete
+        Pete += 1
+        return Pete
+        await ctx.send('https://imgur.com/Z7T1Gh5')
+
+    @commands.command(pass_context = True)
+    async def AddDonutNiall(self, ctx):
+        global Niall
+        Niall += 1
+        return Niall
+        await ctx.send('https://imgur.com/Z7T1Gh5')
+
+
+
+
+
+    # @commands.command(pass_context = True)
+    # async def Leaderboard(self, ctx):
+    #     await ctx.send('Voss: {}\nAsh: {}\nJay: {}\nAaron: {}\nConnor: {}\nPete: {}\nNiall: {}\nBaldwin: {}'.format(Voss, Ash, Jay, Aaron, Connor, Pete, Niall, Baldwin))
+
+    @commands.command(pass_context = True)
+    async def Leaderboard(self, ctx):
 
         embed = discord.Embed(
             colour = discord.Colour.blue()
