@@ -89,7 +89,7 @@ async def on_message(message):
             await message.channel.send(random.choice(responses))
 
 @tasks.loop(seconds=30)
-async def called_once_a_week(ctx):
+async def called_once_a_week():
     message_channel = client.get_channel(target_channel_id)
     print(f"Got channel {message_channel}")
     global Niall
@@ -108,7 +108,7 @@ async def called_once_a_week(ctx):
     Ash = 0
     Pete = 0
     Aaron = 0
-    await ctx.send('Reset')
+    await channel.send('Reset')
     return Niall
     return Voss
     return Connor
