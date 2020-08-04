@@ -33,26 +33,19 @@ class donuts(commands.Cog):
 
     @commands.command(pass_context = True)
     async def Leaderboard(self, ctx):
-        await ctx.send('Voss: {}\nAsh: {}'.format(Voss, Ash))
-        # await ctx.send('Voss: ' + Voss);
-        # await ctx.send('Ash: ' + Ash);
-        # await ctx.send('Jay: ' + Jay);
-        # await ctx.send('Aaron: ' + Aaron);
-        # await ctx.send('Connor: ' + Connor);
-        # await ctx.send('Pete: ' + Pete);
-        # await ctx.send('Niall: ' + Niall);
+        await ctx.send('Voss: {}\nAsh: {}\nAsh: {}\nJay: {}\nAaron: {}\nConnor: {}\nPete: {}\nNiall: {}\nBaldwin: {}'.format(Voss, Ash, Jay, Aaron, Connor, Pete, Niall, Baldwin))
 
-        @commands.command(pass_context = True)
-        async def embedtest(self, ctx):
+    @commands.command(pass_context = True)
+    async def embedtest(self, ctx):
 
-            embed = discord.Embed(
-                colour = discord.Colour.blue()
-            )
+        embed = discord.Embed(
+            colour = discord.Colour.blue()
+        )
 
-            embed.set_author(name='Donut Leaderboard')
-            embed.add_field(name='Voss: ', value=('{}'.format(Voss)),inline=False)
+        embed.set_author(name='Donut Leaderboard')
+        embed.add_field(name='Voss: ', value=('{}'.format(Voss)),inline=False)
 
-            await ctx.send(embed=embed)
+        await ctx.send(embed=embed)
 
 
 def setup(client):
