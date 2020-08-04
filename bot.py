@@ -112,8 +112,7 @@ async def called_once_a_week(pass_context = True):
     message_channel = client.get_channel(target_channel_id)
     print(f"Got channel {message_channel}")
     await message_channel.send("reset")
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(Resetdonuts)
+    await ctx.invoke(client.get_command('Resetdonuts'))
 
 @called_once_a_week.before_loop
 async def before():
