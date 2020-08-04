@@ -31,6 +31,7 @@ class donuts(commands.Cog):
 
     @commands.command(pass_context = True)
     async def DonutLeaderboard(self, ctx):
+        await ctx.send('Baldwin: ');
         await ctx.send('Baldwin: ' + Baldwin);
         await ctx.send('Voss: ' + Voss);
         await ctx.send('Ash: ' + Ash);
