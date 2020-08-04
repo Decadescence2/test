@@ -108,6 +108,7 @@ async def called_once_a_week():
     Ash = 0
     Pete = 0
     Aaron = 0
+    await ctx.send('Reset')
     return Niall
     return Voss
     return Connor
@@ -116,7 +117,6 @@ async def called_once_a_week():
     return Pete
     return Jay
     return Aaron
-    await ctx.send('Reset')
 
 @called_once_a_week.before_loop
 async def before():
