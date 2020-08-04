@@ -111,10 +111,10 @@ async def called_once_a_week():
     # Aaron = 0
     # await message_channel.send('Reset')
 
-@called_once_a_week.before_loop
-async def before():
-    await client.wait_until_ready()
-    print("Finished waiting")
+# @called_once_a_day.before_loop
+# async def before():
+#     await bot.wait_until_ready()
+#     print("Finished waiting")
 
 @client.command()
 async def Test(ctx):
