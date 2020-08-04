@@ -76,22 +76,10 @@ async def on_message(message):
             responses = ['https://imgur.com/SnGm07p', 'https://imgur.com/xUcha8d''https://imgur.com/SFY00cc','https://imgur.com/l1isdSZ','https://imgur.com/XiST5sG','https://imgur.com/Q0c3E8c','https://imgur.com/YFwZgbl','https://imgur.com/vlkOGaf','https://imgur.com/aWyR7iX', 'https://imgur.com/8DjzVc5', 'https://imgur.com/ovOGXf8','https://imgur.com/8HMehnO','https://imgur.com/jvlfhzn','https://imgur.com/8KMJ6sr']
             await message.channel.send(random.choice(responses))
 
-# @client.command(pass_context = True, aliases = ['Purge'])
-# async def purge (ctx, number):
-#     number = int(number) #Converting the amount of messages to delete to an integer
-#     counter = 0
-#     async for x in Client.logs_from(ctx.message.channel, limit = number):
-#         if counter < number:
-#             await ctx.message.delete(x)
-#             counter += 1
-#             await asyncio.sleep(1.2)
-
-
 
 @client.command()
 async def Test(ctx):
     await ctx.send('working')
 
-called_once_a_week.start()
 client.loop.create_task(change_status())
 client.run(os.environ['token'])
