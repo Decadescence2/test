@@ -19,7 +19,7 @@ Niall = int(0)
 
 target_channel_id = 523703758564360197
 
-bg_task = loop.create_task(Reset())
+bg_task = client.loop.create_task(Reset())
 
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
@@ -115,8 +115,7 @@ async def Reset(ctx):
     counter = 0
     channel = client.get_channel(target_channel_id) # channel ID goes here
     while not client.is_closed():
-        counter += 1
-        await channel.send(counter)
+        await channel.send('Reset')
         await asyncio.sleep(20) # task runs every 60 seconds
         await ctx.invoke(client.get_command('Resetdonuts'))
 
