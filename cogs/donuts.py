@@ -81,7 +81,7 @@ class donuts(commands.Cog):
         return Niall
 
     @commands.command(pass_context = True)
-    async def AddDonutNiall(self, ctx):
+    async def Resetdonuts(self, ctx):
         global Niall
         global Voss
         global Connor
