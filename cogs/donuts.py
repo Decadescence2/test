@@ -13,7 +13,34 @@ Connor = int(0)
 Aaron = int(0)
 Pete = int(0)
 Niall = int(0)
+target_channel_id = 523703758564360197
 
+@tasks.loop(seconds=30)
+async def called_once_a_week():
+    message_channel = client.get_channel(target_channel_id)
+    print(f"Got channel {message_channel}")
+    await message_channel.send("reset")
+    global Niall
+    global Voss
+    global Connor
+    global Baldwin
+    global Ash
+    global Pete
+    global Jay
+    global Aaron
+    Niall = 0
+    Voss = 0
+    Connor = 0
+    Baldwin = 0
+    Jay = 0
+    Ash = 0
+    Pete = 0
+    Aaron = 0
+
+@called_once_a_week.before_loop
+async def before():
+    await client.wait_until_ready()
+    print("Finished waiting")
 
 class donuts(commands.Cog):
 
@@ -80,35 +107,6 @@ class donuts(commands.Cog):
         Niall += 1
         await ctx.send('Donut Added')
         return Niall
-
-        target_channel_id = 523703758564360197
-
-    @tasks.loop(seconds=30)
-    async def called_once_a_week():
-        message_channel = client.get_channel(target_channel_id)
-        print(f"Got channel {message_channel}")
-        await message_channel.send("reset")
-        global Niall
-        global Voss
-        global Connor
-        global Baldwin
-        global Ash
-        global Pete
-        global Jay
-        global Aaron
-        Niall = 0
-        Voss = 0
-        Connor = 0
-        Baldwin = 0
-        Jay = 0
-        Ash = 0
-        Pete = 0
-        Aaron = 0
-
-    @called_once_a_week.before_loop
-    async def before():
-        await client.wait_until_ready()
-        print("Finished waiting")
 
     # @commands.command(pass_context = True)
     # async def Leaderboard(self, ctx):
