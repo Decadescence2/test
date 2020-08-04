@@ -108,7 +108,7 @@ async def on_message(message):
             await message.channel.send(random.choice(responses))
 
 @tasks.loop(seconds=30)
-async def called_once_a_week(pass_context = True):
+async def called_once_a_week(ctx):
     message_channel = client.get_channel(target_channel_id)
     print(f"Got channel {message_channel}")
     await message_channel.send("reset")
