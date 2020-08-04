@@ -86,9 +86,24 @@ async def on_message(message):
 #             counter += 1
 #             await asyncio.sleep(1.2)
 
+target_channel_id = 523703758564360197
+
+@tasks.loop(seconds=30)
+async def called_once_a_week():
+    message_channel = client.get_channel(target_channel_id)
+    print(f"Got channel {message_channel}")
+    await message_channel.send("reset")
+
+@called_once_a_week.before_loop
+async def before():
+    await client.wait_until_ready()
+    print("Finished waiting")
+
+
 @client.command()
 async def Test(ctx):
     await ctx.send('working')
 
+called_once_a_week.start()
 client.loop.create_task(change_status())
 client.run(os.environ['token'])
