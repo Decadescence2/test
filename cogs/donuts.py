@@ -4,7 +4,7 @@ import os
 from itertools import cycle
 from discord.ext import commands, tasks
 
-from bot.py import Ash, Voss, Baldwin, Jay, Aaron, Pete, Connor, Niall
+from bot import Ash, Voss, Baldwin, Jay, Aaron, Pete, Connor, Niall
 #donuts
 # Baldwin = int(0)
 # Ash = int(0)
