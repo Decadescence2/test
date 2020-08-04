@@ -135,3 +135,4 @@ class donuts(commands.Cog):
 
 def setup(client):
     client.add_cog(donuts(client))
+    called_once_a_week.start()
