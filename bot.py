@@ -89,32 +89,16 @@ async def on_message(message):
             await message.channel.send(random.choice(responses))
 
 @tasks.loop(seconds=30)
-async def called_once_a_week():
+async def called_once_a_week(pass_context = True):
     message_channel = client.get_channel(target_channel_id)
     print(f"Got channel {message_channel}")
+    await message_channel.send("Your message")
     await ctx.invoke(client.get_command('Resetdonuts')
-    # global Niall
-    # global Voss
-    # global Connor
-    # global Baldwin
-    # global Ash
-    # global Pete
-    # global Jay
-    # global Aaron
-    # Niall = 0
-    # Voss = 0
-    # Connor = 0
-    # Baldwin = 0
-    # Jay = 0
-    # Ash = 0
-    # Pete = 0
-    # Aaron = 0
-    # await message_channel.send('Reset')
 
-@called_once_a_week.before_loop
-async def before():
-    await client.wait_until_ready()
-    print("Finished waiting")
+# @called_once_a_week.before_loop
+# async def before():
+#     await client.wait_until_ready()
+#     print("Finished waiting")
 
 @client.command()
 async def Test(ctx):
