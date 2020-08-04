@@ -22,7 +22,7 @@ class donuts(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        print ('donut leaderboard Loaded')
+        print ('Donut leaderboard Loaded')
 
     @commands.command(pass_context = True)
     async def AddDonutVoss(self, ctx):
@@ -30,16 +30,16 @@ class donuts(commands.Cog):
         await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
-    async def DonutLeaderboard(self, ctx):
+    async def Leaderboard(self, ctx):
         await ctx.send('Baldwin: ');
-        await ctx.send('Baldwin: ' + Baldwin);
-        await ctx.send('Voss: ' + Voss);
-        await ctx.send('Ash: ' + Ash);
-        await ctx.send('Jay: ' + Jay);
-        await ctx.send('Aaron: ' + Aaron);
-        await ctx.send('Connor: ' + Connor);
-        await ctx.send('Pete: ' + Pete);
-        await ctx.send('Niall: ' + Niall);
+        await ctx.send('Baldwin: ' + Voss);
+        # await ctx.send('Voss: ' + Voss);
+        # await ctx.send('Ash: ' + Ash);
+        # await ctx.send('Jay: ' + Jay);
+        # await ctx.send('Aaron: ' + Aaron);
+        # await ctx.send('Connor: ' + Connor);
+        # await ctx.send('Pete: ' + Pete);
+        # await ctx.send('Niall: ' + Niall);
 
 
 
