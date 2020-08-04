@@ -6,7 +6,6 @@ import random
 
 from discord.ext import commands, tasks
 from itertools import cycle
-from donuts.py import Voss, Ash, Baldwin, Jay, Aaron, Pete, Connor, Niall
 
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
@@ -86,35 +85,6 @@ async def on_message(message):
 #             await ctx.message.delete(x)
 #             counter += 1
 #             await asyncio.sleep(1.2)
-
-target_channel_id = 523703758564360197
-
-@tasks.loop(seconds=30)
-async def called_once_a_week():
-    message_channel = client.get_channel(target_channel_id)
-    print(f"Got channel {message_channel}")
-    await message_channel.send("reset")
-    global Niall
-    global Voss
-    global Connor
-    global Baldwin
-    global Ash
-    global Pete
-    global Jay
-    global Aaron
-    Niall = 0
-    Voss = 0
-    Connor = 0
-    Baldwin = 0
-    Jay = 0
-    Ash = 0
-    Pete = 0
-    Aaron = 0
-
-@called_once_a_week.before_loop
-async def before():
-    await client.wait_until_ready()
-    print("Finished waiting")
 
 
 
