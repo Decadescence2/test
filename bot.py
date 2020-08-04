@@ -6,7 +6,7 @@ import random
 
 from discord.ext import commands, tasks
 from itertools import cycle
-# from donuts import *
+from donuts import Resetdonuts
 
 Baldwin = int(0)
 Ash = int(0)
@@ -93,12 +93,12 @@ async def called_once_a_week(pass_context = True):
     message_channel = client.get_channel(target_channel_id)
     print(f"Got channel {message_channel}")
     await message_channel.send("Your message")
-    await ctx.invoke(client.get_command('Resetdonuts')
+    asyncio.run(Resetdonuts)
 
-# @called_once_a_week.before_loop
-# async def before():
-#     await client.wait_until_ready()
-#     print("Finished waiting")
+@called_once_a_week.before_loop
+async def before():
+    await client.wait_until_ready()
+    print("Finished waiting")
 
 @client.command()
 async def Test(ctx):
