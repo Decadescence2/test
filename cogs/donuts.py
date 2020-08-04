@@ -42,8 +42,21 @@ class donuts(commands.Cog):
         # await ctx.send('Pete: ' + Pete);
         # await ctx.send('Niall: ' + Niall);
 
+        @commands.command(pass_context = True)
+        async def Test2(self, ctx):
 
+            embed = discord.Embed(
+                colour = discord.Colour.blue()
+            )
 
+            embed.set_author(name='Donut Leaderboard')
+            embed.add_field(name='Voss:', value=Voss,inline=False)
+            embed.add_field(name='MegaSpam Commands', value='MSVoss\nMSBaldwin\nMSJay\nMSConnor\nMS(Message)',inline=False)
+            embed.add_field(name='Ghost Ping Commands', value='GhostVoss\nGhostBaldwin\nGhostJay\nGhostConnor\nGhostSimon\nGhostPete\nGhostAaron\nGhostNiall',inline=False)
+            embed.add_field(name='Random Commands', value='8Ball\nDonut',inline=False)
+            embed.add_field(name='Admin Commands', value='Load (cog_name)\nUnload (cog_name)\nReload (cog_name)\n', inline=False)
+
+            await ctx.send(embed=embed)
 
 
 def setup(client):
