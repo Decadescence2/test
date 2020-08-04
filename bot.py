@@ -6,7 +6,7 @@ import random
 
 from discord.ext import commands, tasks
 from itertools import cycle
-from donuts import *
+from test/cogs/donuts import *
 
 target_channel_id = 523703758564360197
 
