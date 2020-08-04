@@ -28,8 +28,8 @@ class donuts(commands.Cog):
     async def AddDonutVoss(self, ctx):
         global Voss
         Voss += 1
-        return Voss
         await ctx.send('https://imgur.com/Z7T1Gh5')
+        return Voss
 
     @commands.command(pass_context = True)
     async def AddDonutJay(self, ctx):
@@ -42,7 +42,7 @@ class donuts(commands.Cog):
     async def AddDonutBaldwin(self, ctx):
         global Baldwin
         Baldwin += 1
-        return Badlwin
+        return Baldwin
         await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
