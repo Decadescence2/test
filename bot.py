@@ -8,14 +8,14 @@ from discord.ext import commands, tasks
 from itertools import cycle
 # from donuts import *
 
-global Baldwin = int(0)
-global Ash = int(0)
+global Baldwin = 0
+global Ash = 0
 global Voss = 0
-global Jay = int(0)
-global Connor = int(0)
-global Aaron = int(0)
-global Pete = int(0)
-global Niall = int(0)
+global Jay = 0
+global Connor = 0
+global Aaron = 0
+global Pete = 0
+global Niall = 0
 
 target_channel_id = 523703758564360197
 
