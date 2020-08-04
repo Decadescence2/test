@@ -26,13 +26,13 @@ class donuts(commands.Cog):
 
     @commands.command(pass_context = True)
     async def AddDonutVoss(self, ctx):
-        Voss += 1
+        VossDonut = Voss + 1
         await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
     async def DonutLeaderboard(self, ctx):
         await ctx.send(Baldwin)
-        await ctx.send(Voss)
+        await ctx.send('Voss: ', VossDonut)
         await ctx.send(Ash)
         await ctx.send(Jay)
         await ctx.send(Aaron)
