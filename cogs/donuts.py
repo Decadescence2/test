@@ -26,7 +26,9 @@ class donuts(commands.Cog):
 
     @commands.command(pass_context = True)
     async def AddDonutVoss(self, ctx):
-        Voss + 1
+        global Voss
+        Voss += 1
+        return Voss
         await ctx.send('https://imgur.com/Z7T1Gh5')
 
     @commands.command(pass_context = True)
