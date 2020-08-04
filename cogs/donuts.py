@@ -19,6 +19,10 @@ target_channel_id = 523703758564360197
 
 class donuts(commands.Cog):
 
+    def __init__(self, client):
+        self.client = client
+        self.called_once_a_week.start()
+
     @tasks.loop(seconds=30)
     async def called_once_a_week():
         message_channel = client.get_channel(target_channel_id)
@@ -45,10 +49,6 @@ class donuts(commands.Cog):
     async def before():
         await client.wait_until_ready()
         print("Finished waiting")
-
-    def __init__(self, client):
-        self.client = client
-        self.called_once_a_week.start()
 
     @commands.Cog.listener()
     async def on_ready(self):
