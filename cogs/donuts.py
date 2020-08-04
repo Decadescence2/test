@@ -82,6 +82,25 @@ class donuts(commands.Cog):
         await ctx.send('Donut Added')
         return Niall
 
+    @commands.command(pass_context = True)
+    async def Resetdonuts(self, ctx):
+        global Niall
+        global Voss
+        global Connor
+        global Baldwin
+        global Ash
+        global Pete
+        global Jay
+        global Aaron
+        Niall = 0
+        Voss = 0
+        Connor = 0
+        Baldwin = 0
+        Jay = 0
+        Ash = 0
+        Pete = 0
+        Aaron = 0
+
     # @commands.command(pass_context = True)
     # async def Leaderboard(self, ctx):
     #     await ctx.send('Voss: {}\nAsh: {}\nJay: {}\nAaron: {}\nConnor: {}\nPete: {}\nNiall: {}\nBaldwin: {}'.format(Voss, Ash, Jay, Aaron, Connor, Pete, Niall, Baldwin))
