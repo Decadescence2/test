@@ -33,7 +33,7 @@ class donuts(commands.Cog):
 
     @commands.command(pass_context = True)
     async def Leaderboard(self, ctx):
-        await ctx.send('Voss: {}\nAsh: {}\nAsh: {}\nJay: {}\nAaron: {}\nConnor: {}\nPete: {}\nNiall: {}\nBaldwin: {}'.format(Voss, Ash, Jay, Aaron, Connor, Pete, Niall, Baldwin))
+        await ctx.send('Voss: {}\nAsh: {}\nJay: {}\nAaron: {}\nConnor: {}\nPete: {}\nNiall: {}\nBaldwin: {}'.format(Voss, Ash, Jay, Aaron, Connor, Pete, Niall, Baldwin))
 
     @commands.command(pass_context = True)
     async def embedtest(self, ctx):
@@ -43,7 +43,7 @@ class donuts(commands.Cog):
         )
 
         embed.set_author(name='Donut Leaderboard')
-        embed.add_field(name='Voss: ', value=('{}'.format(Voss)),inline=False)
+        embed.add_field(name='Voss: ', value=('{}'.format(Voss)),inline=True)
 
         await ctx.send(embed=embed)
 
