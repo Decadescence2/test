@@ -4,6 +4,7 @@ import os
 from itertools import cycle
 from discord.ext import commands, tasks
 
+from bot.py import *
 #donuts
 # Baldwin = int(0)
 # Ash = int(0)
@@ -13,9 +14,6 @@ from discord.ext import commands, tasks
 # Aaron = int(0)
 # Pete = int(0)
 # Niall = int(0)
-
-
-
 
 class donuts(commands.Cog):
 
