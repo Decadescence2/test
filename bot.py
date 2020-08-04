@@ -6,6 +6,7 @@ import random
 
 from discord.ext import commands, tasks
 from itertools import cycle
+from donuts.py import Voss, Ash, Baldwin, Jay, Aaron, Pete, Connor, Niall
 
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
