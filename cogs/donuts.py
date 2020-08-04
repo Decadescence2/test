@@ -44,6 +44,13 @@ class donuts(commands.Cog):
 
         embed.set_author(name='Donut Leaderboard')
         embed.add_field(name='Voss: ', value=('{}'.format(Voss)),inline=True)
+        embed.add_field(name='Ash: ', value=('{}'.format(Ash)),inline=True)
+        embed.add_field(name='Jay: ', value=('{}'.format(Jay)),inline=True)
+        embed.add_field(name='Baldwin: ', value=('{}'.format(Baldwin)),inline=True)
+        embed.add_field(name='Pete: ', value=('{}'.format(Aaron)),inline=True)
+        embed.add_field(name='Niall: ', value=('{}'.format(Niall)),inline=True)
+        embed.add_field(name='Aaron: ', value=('{}'.format(Aaron)),inline=True)
+        embed.set_footer(*, text=Embed.empty, icon_url=Embed.https://www.theflavorbender.com/wp-content/uploads/2014/09/Simpsons-Doughnuts-4238-Copy-1.jpg)
 
         await ctx.send(embed=embed)
 
