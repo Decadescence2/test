@@ -39,7 +39,7 @@ class donuts(commands.Cog):
     async def embedtest(self, ctx):
 
         embed = discord.Embed(
-            colour = discord.Colour.0xff00f2()
+            colour = discord.Colour.Pink()
         )
 
         embed.set_author(name='Donut Leaderboard', icon_url='https://www.theflavorbender.com/wp-content/uploads/2014/09/Simpsons-Doughnuts-4238-Copy-1.jpg')
