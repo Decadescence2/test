@@ -10,6 +10,7 @@ class donutweekly(commands.Cog):
 
     def __init__(self, client):
         self.client = client
+        self.WeeklyReset.start()
 
     @commands.Cog.listener()
     async def on_ready(self):
