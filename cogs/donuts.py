@@ -4,16 +4,7 @@ import os
 from itertools import cycle
 from discord.ext import commands, tasks
 
-from bot import Ash, Voss, Baldwin, Jay, Aaron, Pete, Connor, Niall
-#donuts
-# Baldwin = int(0)
-# Ash = int(0)
-# Voss = 0
-# Jay = int(0)
-# Connor = int(0)
-# Aaron = int(0)
-# Pete = int(0)
-# Niall = int(0)
+from bot import Ash, Voss, Baldwin, Jay, Aaron, Pete, Connor, Niall, AshWeek, VossWeek, BaldwinWeek, JayWeek, AaronWeek, PeteWeek, ConnorWeek, NiallWeek
 
 class donuts(commands.Cog):
 
@@ -27,57 +18,61 @@ class donuts(commands.Cog):
     @commands.command(pass_context = True)
     async def AddDonutVoss(self, ctx):
         global Voss
+        global VossWeek
+        VossWeek += 1
         Voss += 1
-        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(Voss))
+        await ctx.send('Donut Added, Mans now dropped {} donuts total'.format(Voss))
+        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(VossWeek))
         return Voss
+        return VossWeek
 
     @commands.command(pass_context = True)
     async def AddDonutJay(self, ctx):
         global Jay
         Jay += 1
-        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(Jay))
+        await ctx.send('Donut Added, Mans now dropped {} donuts total'.format(Jay))
         return Jay
 
     @commands.command(pass_context = True)
     async def AddDonutBaldwin(self, ctx):
         global Baldwin
         Baldwin += 1
-        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(Baldwin))
+        await ctx.send('Donut Added, Mans now dropped {} donuts total'.format(Baldwin))
         return Baldwin
 
     @commands.command(pass_context = True)
     async def AddDonutAsh(self, ctx):
         global Ash
         Ash += 1
-        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(Ash))
+        await ctx.send('Donut Added, Mans now dropped {} donuts total'.format(Ash))
         return Ash
 
     @commands.command(pass_context = True)
     async def AddDonutConnor(self, ctx):
         global Connor
         Connor += 1
-        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(Connor))
+        await ctx.send('Donut Added, Mans now dropped {} donuts total'.format(Connor))
         return Connor
 
     @commands.command(pass_context = True)
     async def AddDonutAaron(self, ctx):
         global Aaron
         Aaron += 1
-        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(Aaron))
+        await ctx.send('Donut Added, Mans now dropped {} donuts total'.format(Aaron))
         return Aaron
 
     @commands.command(pass_context = True)
     async def AddDonutPete(self, ctx):
         global Pete
         Pete += 1
-        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(Pete))
+        await ctx.send('Donut Added, Mans now dropped {} donuts total'.format(Pete))
         return Pete
 
     @commands.command(pass_context = True)
     async def AddDonutNiall(self, ctx):
         global Niall
         Niall += 1
-        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(Niall))
+        await ctx.send('Donut Added, Mans now dropped {} donuts total'.format(Niall))
         return Niall
 ######################################################
 
@@ -85,56 +80,56 @@ class donuts(commands.Cog):
     async def RemoveDonutVoss(self, ctx):
         global Voss
         Voss -= 1
-        await ctx.send('Donut Removed, Mans now dropped {} donuts this week'.format(Voss))
+        await ctx.send('Donut Removed, Mans now dropped {} donuts total'.format(Voss))
         return Voss
 
     @commands.command(pass_context = True)
     async def RemoveDonutJay(self, ctx):
         global Jay
         Jay -= 1
-        await ctx.send('Donut Removed, Mans now dropped {} donuts this week'.format(Jay))
+        await ctx.send('Donut Removed, Mans now dropped {} donuts total'.format(Jay))
         return Jay
 
     @commands.command(pass_context = True)
     async def RemoveDonutBaldwin(self, ctx):
         global Baldwin
         Baldwin -= 1
-        await ctx.send('Donut Removed, Mans now dropped {} donuts this week'.format(Baldwin))
+        await ctx.send('Donut Removed, Mans now dropped {} donuts total'.format(Baldwin))
         return Baldwin
 
     @commands.command(pass_context = True)
     async def RemoveDonutAsh(self, ctx):
         global Ash
         Ash -= 1
-        await ctx.send('Donut Removed, Mans now dropped {} donuts this week'.format(Ash))
+        await ctx.send('Donut Removed, Mans now dropped {} donuts total'.format(Ash))
         return Ash
 
     @commands.command(pass_context = True)
     async def RemoveDonutConnor(self, ctx):
         global Connor
         Connor -= 1
-        await ctx.send('Donut Removed, Mans now dropped {} donuts this week'.format(Connor))
+        await ctx.send('Donut Removed, Mans now dropped {} donuts total'.format(Connor))
         return Connor
 
     @commands.command(pass_context = True)
     async def removeDonutAaron(self, ctx):
         global Aaron
         Aaron -= 1
-        await ctx.send('Donut Added, Mans now dropped {} donuts this week'.format(Aaron))
+        await ctx.send('Donut Added, Mans now dropped {} donuts total'.format(Aaron))
         return Aaron
 
     @commands.command(pass_context = True)
     async def RemoveDonutPete(self, ctx):
         global Pete
         Pete -= 1
-        await ctx.send('Donut Removed, Mans now dropped {} donuts this week'.format(Pete))
+        await ctx.send('Donut Removed, Mans now dropped {} donuts total'.format(Pete))
         return Pete
 
     @commands.command(pass_context = True)
     async def RemoveDonutNiall(self, ctx):
         global Niall
         Niall -= 1
-        await ctx.send('Donut Removed, Mans now dropped {} donuts this week'.format(Niall))
+        await ctx.send('Donut Removed, Mans now dropped {} donuts total'.format(Niall))
         return Niall
 
     @commands.command(pass_context = True)
