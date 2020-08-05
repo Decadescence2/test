@@ -7,15 +7,6 @@ import random
 from discord.ext import commands, tasks
 from itertools import cycle
 
-Baldwin = int(0)
-Ash = int(0)
-Voss = 0
-Jay = int(0)
-Connor = int(0)
-Aaron = int(0)
-Pete = int(0)
-Niall = int(0)
-
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
 
@@ -64,24 +55,6 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
         await ctx.send('You do not have permission to use this command')
 
-@client.command(pass_context = True)
-async def wipealldonuts(ctx):
-    global Niall
-    global Voss
-    global Connor
-    global Baldwin
-    global Ash
-    global Pete
-    global Jay
-    global Aaron
-    Niall = 0
-    Voss = 0
-    Connor = 0
-    Baldwin = 0
-    Jay = 0
-    Ash = 0
-    Pete = 0
-    Aaron = 0
 
 @client.event
 async def on_message(message):
