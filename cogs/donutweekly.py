@@ -4,8 +4,14 @@ import os
 from itertools import cycle
 from discord.ext import commands, tasks
 
-
-from bot import AshWeek, VossWeek, BaldwinWeek, JayWeek, AaronWeek, PeteWeek, ConnorWeek, NiallWeek
+AshWeek = int(0)
+VossWeek = int(0)
+JayWeek = int(0)
+BaldwinWeek = int(0)
+ConnorWeek = int(0)
+PeteWeek = int(0)
+AaronWeek = int(0)
+NiallWeek = int(0)
 
 class donutweekly(commands.Cog):
 
