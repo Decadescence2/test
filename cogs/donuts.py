@@ -4,28 +4,28 @@ import os
 from itertools import cycle
 from discord.ext import commands, tasks
 
+Baldwin = int(0)
+Ash = int(0)
+Voss = 0
+Jay = int(0)
+Connor = int(0)
+Aaron = int(0)
+Pete = int(0)
+Niall = int(0)
+AshWeek = int(0)
+VossWeek = int(0)
+JayWeek = int(0)
+BaldwinWeek = int(0)
+ConnorWeek = int(0)
+PeteWeek = int(0)
+AaronWeek = int(0)
+NiallWeek = int(0)
+
 class donuts(commands.Cog):
 
     def __init__(self, client):
         self.client = client
         self.WeeklyReset.start()
-
-        Baldwin = int(0)
-        Ash = int(0)
-        Voss = 0
-        Jay = int(0)
-        Connor = int(0)
-        Aaron = int(0)
-        Pete = int(0)
-        Niall = int(0)
-        AshWeek = int(0)
-        VossWeek = int(0)
-        JayWeek = int(0)
-        BaldwinWeek = int(0)
-        ConnorWeek = int(0)
-        PeteWeek = int(0)
-        AaronWeek = int(0)
-        NiallWeek = int(0)
 
 
     @commands.Cog.listener()
