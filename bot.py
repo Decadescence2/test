@@ -16,10 +16,16 @@ Connor = int(0)
 Aaron = int(0)
 Pete = int(0)
 Niall = int(0)
+AshWeek = int(0)
+VossWeek = int(0)
+JayWeek = int(0)
+BaldwinWeek = int(0)
+ConnorWeek = int(0)
+PeteWeek = int(0)
+AaronWeek = int(0)
+NiallWeek = int(0)
 
 # target_channel_id = 523703758564360197
-#
-# bg_task = asyncio.loop.create_task(Reset())
 
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
@@ -28,18 +34,6 @@ Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game D
             'With My Amazing Headset', 'UNO.', 'With My Fallout Strap On Mod', 'Speaking Over Niall'
             , 'Dont Starve IRL', '~']
 
-# @client.command()
-# async def Channels(ctx):
-#     text_channel_list = []
-#     for guild in client.guilds:
-#         for channel in guild.text_channels:
-#             text_channel_list.append(channel)
-#             await ctx.send(text_channel_list)
-# @client.command()
-# async def send_all(ctx, member):
-#     for channel in client.get_all_channels():
-#         if channel.permissions_for(member):
-#             await ctx.send(channel, 'test')
 
 @client.command()
 async def Load(ctx, extension):
@@ -108,16 +102,6 @@ async def on_message(message):
         if "gif" in message.content:
             responses = ['https://imgur.com/SnGm07p', 'https://imgur.com/xUcha8d''https://imgur.com/SFY00cc','https://imgur.com/l1isdSZ','https://imgur.com/XiST5sG','https://imgur.com/Q0c3E8c','https://imgur.com/YFwZgbl','https://imgur.com/vlkOGaf','https://imgur.com/aWyR7iX', 'https://imgur.com/8DjzVc5', 'https://imgur.com/ovOGXf8','https://imgur.com/8HMehnO','https://imgur.com/jvlfhzn','https://imgur.com/8KMJ6sr']
             await message.channel.send(random.choice(responses))
-
-
-# async def Reset(ctx):
-#     await client.wait_until_ready()
-#     counter = 0
-#     channel = client.get_channel(target_channel_id) # channel ID goes here
-#     while not client.is_closed():
-#         await channel.send('Reset')
-#         await asyncio.sleep(20) # task runs every 60 seconds
-#         await ctx.invoke(client.get_command('Resetdonuts'))
 
 
 @client.command()
