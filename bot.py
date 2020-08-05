@@ -7,6 +7,15 @@ import random
 from discord.ext import commands, tasks
 from itertools import cycle
 
+Baldwin = int(0)
+Ash = int(0)
+Voss = 0
+Jay = int(0)
+Connor = int(0)
+Aaron = int(0)
+Pete = int(0)
+Niall = int(0)
+
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
 
