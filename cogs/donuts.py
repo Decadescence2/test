@@ -33,7 +33,7 @@ class donuts(commands.Cog):
     async def on_ready(self):
         print ('Donut leaderboard Loaded')
 
-    @tasks.loop(seconds=30)
+    @tasks.loop(hours=168)
     async def WeeklyReset(self):
         print('reset')
         global NiallWeek
@@ -52,7 +52,7 @@ class donuts(commands.Cog):
         AshWeek = 0
         PeteWeek = 0
         AaronWeek = 0
-        HasBeenReset = 1
+        # HasBeenReset = 1
 
 
     @commands.command(pass_context = True)
@@ -81,7 +81,7 @@ class donuts(commands.Cog):
             colour = discord.Colour.blue()
         )
 
-        embed.set_author(name='Weekly Donut Leaderboard - Resets 00:40 Thursday at the moment', icon_url='https://www.theflavorbender.com/wp-content/uploads/2014/09/Simpsons-Doughnuts-4238-Copy-1.jpg')
+        embed.set_author(name='Weekly Donut Leaderboard - Resets 1AM Thursday at the moment', icon_url='https://www.theflavorbender.com/wp-content/uploads/2014/09/Simpsons-Doughnuts-4238-Copy-1.jpg')
         embed.add_field(name='Voss: ', value=('{}'.format(VossWeek)),inline=False)
         embed.add_field(name='Ash: ', value=('{}'.format(AshWeek)),inline=False)
         embed.add_field(name='Jay: ', value=('{}'.format(JayWeek)),inline=False)
