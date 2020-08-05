@@ -7,6 +7,7 @@ import random
 from discord.ext import commands, tasks
 from itertools import cycle
 
+from donutweekly import AshWeek, VossWeek, BaldwinWeek, JayWeek, AaronWeek, PeteWeek, ConnorWeek, NiallWeek
 
 Baldwin = int(0)
 Ash = int(0)
@@ -16,16 +17,6 @@ Connor = int(0)
 Aaron = int(0)
 Pete = int(0)
 Niall = int(0)
-AshWeek = int(0)
-VossWeek = int(0)
-JayWeek = int(0)
-BaldwinWeek = int(0)
-ConnorWeek = int(0)
-PeteWeek = int(0)
-AaronWeek = int(0)
-NiallWeek = int(0)
-
-# target_channel_id = 523703758564360197
 
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
