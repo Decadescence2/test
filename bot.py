@@ -7,8 +7,6 @@ import random
 from discord.ext import commands, tasks
 from itertools import cycle
 
-from donutweekly import AshWeek, VossWeek, BaldwinWeek, JayWeek, AaronWeek, PeteWeek, ConnorWeek, NiallWeek
-
 Baldwin = int(0)
 Ash = int(0)
 Voss = 0
@@ -67,7 +65,7 @@ async def on_command_error(ctx, error):
         await ctx.send('You do not have permission to use this command')
 
 @client.command(pass_context = True)
-async def Resetdonuts(ctx):
+async def wipealldonuts(ctx):
     global Niall
     global Voss
     global Connor
