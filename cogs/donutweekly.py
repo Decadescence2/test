@@ -16,7 +16,7 @@ class donutweekly(commands.Cog):
         print ('Donut Weekly leaderboard Loaded')
 
     @tasks.loop(seconds=30)
-    async def WeeklyReset(self, ctx):
+    async def WeeklyReset(self):
         global NiallWeek
         global VossWeek
         global ConnorWeek
@@ -33,7 +33,8 @@ class donutweekly(commands.Cog):
         AshWeek = 0
         PeteWeek = 0
         AaronWeek = 0
-        ctx.send('Weekly Reset Complete')
+        channel = self.client.get_channel(523703758564360197)
+        await channel.send('test')
 
 
 
