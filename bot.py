@@ -7,6 +7,8 @@ import random
 from discord.ext import commands, tasks
 from itertools import cycle
 
+HasBeenReset = int(0)
+
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
 
@@ -55,6 +57,15 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
         await ctx.send('You do not have permission to use this command')
 
+
+@client.event
+async def ResetMessage(message):
+    await client.process_commands(message)
+    if HasBeenReset == 1:
+        channel = self.client.get_channel(523703758564360197)
+        await channel.send('Weekly Reset Complete')
+    else:
+        return
 
 @client.event
 async def on_message(message):
