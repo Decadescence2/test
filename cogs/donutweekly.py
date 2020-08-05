@@ -4,6 +4,7 @@ import os
 from itertools import cycle
 from discord.ext import commands, tasks
 
+
 from bot import AshWeek, VossWeek, BaldwinWeek, JayWeek, AaronWeek, PeteWeek, ConnorWeek, NiallWeek
 
 class donutweekly(commands.Cog):
@@ -17,7 +18,7 @@ class donutweekly(commands.Cog):
         print ('Donut Weekly leaderboard Loaded')
 
     @tasks.loop(seconds=30)
-    async def WeeklyReset(self, ctx):
+    async def WeeklyReset(self):
         channel = self.client.get_channel(523703758564360197)
         await channel.send('Teset')
         print('reset')
