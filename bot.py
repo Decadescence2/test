@@ -58,15 +58,15 @@ async def on_command_error(ctx, error):
         await ctx.send('You do not have permission to use this command')
 
 
-@client.event
-async def ResetMessage(ctx):
-    await client.process_commands(message)
-    if HasBeenReset == 1:
-        channel = self.client.get_channel(523703758564360197)
-        await channel.send('Weekly Reset Complete')
-        HasBeenReset = 0
-    else:
-        return
+# @client.event
+# async def ResetMessage(ctx):
+#     await client.process_commands(message)
+#     if HasBeenReset == 1:
+#         channel = self.client.get_channel(523703758564360197)
+#         await channel.send('Weekly Reset Complete')
+#         HasBeenReset = 0
+#     else:
+#         return
 
 @client.event
 async def on_message(message):
