@@ -15,6 +15,25 @@ class donutweekly(commands.Cog):
     async def on_ready(self):
         print ('Donut Weekly leaderboard Loaded')
 
+    @tasks.loop(seconds=30)
+    async def WeeklyReset(self, ctx):
+        global NiallWeek
+        global VossWeek
+        global ConnorWeek
+        global BaldwinWeek
+        global AshWeek
+        global PeteWeek
+        global JayWeek
+        global AaronWeek
+        NiallWeek = 0
+        VossWeek = 0
+        ConnorWeek = 0
+        BaldwinWeek = 0
+        JayWeek = 0
+        AshWeek = 0
+        PeteWeek = 0
+        AaronWeek = 0
+        ctx.send('Weekly Reset Complete')
 
 
 
