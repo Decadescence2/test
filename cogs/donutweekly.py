@@ -1,14 +1,14 @@
-# import discord
-# import asyncio
-# import os
-# from itertools import cycle
-# from discord.ext import commands, tasks
-#
-#
-# class donutweekly(commands.Cog):
-#
-#     def __init__(self, client):
-#         self.client = client
+import discord
+import asyncio
+import os
+from itertools import cycle
+from discord.ext import commands, tasks
+
+
+class donutweekly(commands.Cog):
+
+    def __init__(self, client):
+        self.client = client
 #     #     self.WeeklyReset.start()
 #     #
 #     #     AshWeek = int(0)
@@ -20,9 +20,9 @@
 #     #     AaronWeek = int(0)
 #     #     NiallWeek = int(0)
 #     #
-#     # @commands.Cog.listener()
-#     # async def on_ready(self):
-#     #     print ('Donut Weekly leaderboard Loaded')
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print ('Donut Weekly leaderboard Loaded')
 #     #
 #     # @tasks.loop(seconds=30)
 #     # async def WeeklyReset(self):
@@ -64,5 +64,5 @@
 #     #     await ctx.send(embed=embed)
 #
 #
-# def setup(client):
-#     client.add_cog(donutweekly(client))
+def setup(client):
+    client.add_cog(donutweekly(client))
