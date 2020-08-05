@@ -54,6 +54,24 @@ class donuts(commands.Cog):
         AaronWeek = 0
         # HasBeenReset = 1
 
+    @commands.command(pass_context = True)
+    async def ResetWeek(ctx):
+        global NiallWeek
+        global VossWeek
+        global ConnorWeek
+        global BaldwinWeek
+        global AshWeek
+        global PeteWeek
+        global JayWeek
+        global AaronWeek
+        NiallWeek = 0
+        VossWeek = 0
+        ConnorWeek = 0
+        BaldwinWeek = 0
+        JayWeek = 0
+        AshWeek = 0
+        PeteWeek = 0
+        AaronWeek = 0
 
     @commands.command(pass_context = True)
     async def wipealldonuts(ctx):
