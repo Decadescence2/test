@@ -3,6 +3,7 @@ import asyncio
 import os
 from itertools import cycle
 from discord.ext import commands, tasks
+from bot import HasBeenReset
 
 Baldwin = int(0)
 Ash = int(0)
@@ -30,7 +31,7 @@ class donuts(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        print ('Donut Weekly leaderboard Loaded')
+        print ('Donut leaderboard Loaded')
 
     @tasks.loop(seconds=30)
     async def WeeklyReset(self):
@@ -51,6 +52,7 @@ class donuts(commands.Cog):
         AshWeek = 0
         PeteWeek = 0
         AaronWeek = 0
+        HasBeenReset = 1
 
 
     @commands.command(pass_context = True)
@@ -79,7 +81,7 @@ class donuts(commands.Cog):
             colour = discord.Colour.blue()
         )
 
-        embed.set_author(name='Donut Leaderboard', icon_url='https://www.theflavorbender.com/wp-content/uploads/2014/09/Simpsons-Doughnuts-4238-Copy-1.jpg')
+        embed.set_author(name='Weekly Donut Leaderboard - Resets 00:40 Thursday at the moment', icon_url='https://www.theflavorbender.com/wp-content/uploads/2014/09/Simpsons-Doughnuts-4238-Copy-1.jpg')
         embed.add_field(name='Voss: ', value=('{}'.format(VossWeek)),inline=False)
         embed.add_field(name='Ash: ', value=('{}'.format(AshWeek)),inline=False)
         embed.add_field(name='Jay: ', value=('{}'.format(JayWeek)),inline=False)
@@ -279,7 +281,7 @@ class donuts(commands.Cog):
             colour = discord.Colour.blue()
         )
 
-        embed.set_author(name='Donut Leaderboard', icon_url='https://www.theflavorbender.com/wp-content/uploads/2014/09/Simpsons-Doughnuts-4238-Copy-1.jpg')
+        embed.set_author(name='Total Donuts Leaderboard', icon_url='https://www.theflavorbender.com/wp-content/uploads/2014/09/Simpsons-Doughnuts-4238-Copy-1.jpg')
         embed.add_field(name='Voss: ', value=('{}'.format(Voss)),inline=False)
         embed.add_field(name='Ash: ', value=('{}'.format(Ash)),inline=False)
         embed.add_field(name='Jay: ', value=('{}'.format(Jay)),inline=False)
