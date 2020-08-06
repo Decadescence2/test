@@ -56,6 +56,7 @@ class donuts(commands.Cog):
 
     @commands.command(pass_context = True)
     async def ResetWeek(ctx, self):
+        await ctx.send('Weekly donuts Reset')
         global NiallWeek
         global VossWeek
         global ConnorWeek
@@ -72,10 +73,10 @@ class donuts(commands.Cog):
         AshWeek = 0
         PeteWeek = 0
         AaronWeek = 0
-        await ctx.send('Weekly donuts Reset')
 
     @commands.command(pass_context = True)
     async def wipealldonuts(ctx, self):
+        await ctx.send('All Donuts Reset')
         global Niall
         global Voss
         global Connor
@@ -92,7 +93,6 @@ class donuts(commands.Cog):
         Ash = 0
         Pete = 0
         Aaron = 0
-        await ctx.send('All Donuts Reset')
 
     @commands.command(pass_context = True)
     async def Weekly(self, ctx):
