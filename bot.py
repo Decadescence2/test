@@ -92,13 +92,21 @@ async def testWaffle(ctx):
         WaffleResponses = ['https://imgur.com/YhXuOl0','https://imgur.com/OHu9Ws5','https://imgur.com/uSabMdr','https://imgur.com/FmNkgjc','https://imgur.com/Y1nQvn3','https://imgur.com/qY6LvJp','https://imgur.com/1E01due','https://imgur.com/b0QSgkm','https://imgur.com/zhVhf03']
         wafresult = int(randrange(100))
         if wafresult > 1:
-            await ctx.send('this part works')
-            await ctx.send(random.choice(WaffleResponses))
+            await ctx.send(f'this part works')
+            await ctx.send('f'random.choice(WaffleResponses))
             counter += 1
         else:
-            await ctx.send('a rare meme appears')
-            await ctx.send('https://imgur.com/5ezNFt7')
+            await ctx.send(f'a rare meme appears')
+            await ctx.send(f'https://imgur.com/5ezNFt7')
             counter += 1
+
+    @commands.command(pass_context = True)
+    async def flip(self,ctx):
+        result = int(randrange(100))
+        if result < 50:
+            await ctx.send(f'Result was: **Heads**')
+        else:
+            await ctx.send(f'Result was: **Tails**')
 
 
 #     https://imgur.com/YhXuOl0
