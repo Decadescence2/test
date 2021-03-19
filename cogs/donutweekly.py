@@ -20,9 +20,9 @@ class donutweekly(commands.Cog):
 # #     #     AaronWeek = int(0)
 # #     #     NiallWeek = int(0)
 # #     #
-#     @commands.Cog.listener()
-#     async def on_ready(self):
-#         print ('Donut Weekly leaderboard Loaded')
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print ('Donut Weekly leaderboard Loaded')
 # #     #
 # #     # @tasks.loop(seconds=30)
 # #     # async def WeeklyReset(self):

@@ -29,9 +29,9 @@ class donuts(commands.Cog):
 #         self.WeeklyReset.start()
 #
 #
-#     @commands.Cog.listener()
-#     async def on_ready(self):
-#         print ('Donut leaderboard Loaded')
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print ('Donut leaderboard Loaded')
 #
 #     @tasks.loop(hours=168)
 #     async def WeeklyReset(self):
