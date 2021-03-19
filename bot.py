@@ -87,18 +87,19 @@ async def Waffle(ctx):
 
 @client.command()
 async def testWaffle(ctx):
-    counter = 0
-    while counter < 5:
+    counter2 = 0
+    ctx.send('breaks after this')
+    while counter2 < 5:
         wafresult = int(randrange(100))
         if wafresult > 1:
             WaffleResponses2 = ['https://imgur.com/YhXuOl0','https://imgur.com/OHu9Ws5','https://imgur.com/uSabMdr','https://imgur.com/FmNkgjc','https://imgur.com/Y1nQvn3','https://imgur.com/qY6LvJp','https://imgur.com/1E01due','https://imgur.com/b0QSgkm','https://imgur.com/zhVhf03']
             await ctx.send('this part works')
             await ctx.send(random.choice(WaffleResponses2))
-            counter += 1
+            counter2 += 1
         else:
             await ctx.send('a rare meme appears')
             await ctx.send('https://imgur.com/5ezNFt7')
-            counter += 1
+            counter2 += 1
 
     # @commands.command(pass_context = True)
     # async def flip(self,ctx):
