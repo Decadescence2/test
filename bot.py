@@ -91,9 +91,9 @@ async def testWaffle(ctx):
     while counter < 5:
         wafresult = int(randrange(100))
         if wafresult > 1:
-            WaffleResponses = ['https://imgur.com/YhXuOl0','https://imgur.com/OHu9Ws5','https://imgur.com/uSabMdr','https://imgur.com/FmNkgjc','https://imgur.com/Y1nQvn3','https://imgur.com/qY6LvJp','https://imgur.com/1E01due','https://imgur.com/b0QSgkm','https://imgur.com/zhVhf03']
+            WaffleResponses2 = ['https://imgur.com/YhXuOl0','https://imgur.com/OHu9Ws5','https://imgur.com/uSabMdr','https://imgur.com/FmNkgjc','https://imgur.com/Y1nQvn3','https://imgur.com/qY6LvJp','https://imgur.com/1E01due','https://imgur.com/b0QSgkm','https://imgur.com/zhVhf03']
             await ctx.send('this part works')
-            await ctx.send(random.choice(WaffleResponses))
+            await ctx.send(random.choice(WaffleResponses2))
             counter += 1
         else:
             await ctx.send('a rare meme appears')
