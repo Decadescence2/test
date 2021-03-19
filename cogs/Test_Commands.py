@@ -70,13 +70,6 @@ class Test_Commands(commands.Cog):
 
         await author.send(embed=embed)
 
-    @commands.command(pass_context = True)
-    async def Waffle(self, ctx):
-        counter = 0
-        while counter < 5:
-            WaffleResponses = ['https://imgur.com/YhXuOl0','https://imgur.com/OHu9Ws5','https://imgur.com/uSabMdr','https://imgur.com/FmNkgjc','https://imgur.com/Y1nQvn3','https://imgur.com/qY6LvJp','https://imgur.com/1E01due','https://imgur.com/b0QSgkm','https://imgur.com/zhVhf03']
-            await massage.channel.send(random.choice(WaffleRespones))
-            counter += 1
 
 def setup(client):
     client.add_cog(Test_Commands(client))
