@@ -22,10 +22,10 @@
 # AaronWeek = int(0)
 # NiallWeek = int(0)
 #
-# class donuts(commands.Cog):
-#
-#     def __init__(self, client):
-#         self.client = client
+class donuts(commands.Cog):
+
+    def __init__(self, client):
+        self.client = client
 #         self.WeeklyReset.start()
 #
 #
@@ -312,5 +312,5 @@
 #         await ctx.send(embed=embed)
 #
 #
-# def setup(client):
-#     client.add_cog(donuts(client))
+def setup(client):
+    client.add_cog(donuts(client))

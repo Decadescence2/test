@@ -5,10 +5,10 @@
 # from discord.ext import commands, tasks
 #
 #
-# class donutweekly(commands.Cog):
-#
-#     def __init__(self, client):
-#         self.client = client
+class donutweekly(commands.Cog):
+
+    def __init__(self, client):
+        self.client = client
 # #     #     self.WeeklyReset.start()
 # #     #
 # #     #     AshWeek = int(0)
@@ -64,5 +64,5 @@
 # #     #     await ctx.send(embed=embed)
 # #
 # #
-# def setup(client):
-#     client.add_cog(donutweekly(client))
+def setup(client):
+    client.add_cog(donutweekly(client))
