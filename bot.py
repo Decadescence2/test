@@ -82,7 +82,7 @@ async def Waffle(ctx):
     counter = 0
     while counter < 5:
         WaffleResponses = ['https://imgur.com/YhXuOl0','https://imgur.com/OHu9Ws5','https://imgur.com/uSabMdr','https://imgur.com/FmNkgjc','https://imgur.com/Y1nQvn3','https://imgur.com/qY6LvJp','https://imgur.com/1E01due','https://imgur.com/b0QSgkm','https://imgur.com/zhVhf03']
-        await ctx.send(random.choice(WaffleResponses))
+        await ctx.send(random.choice(WaffleResponses), delete_after=5)
         counter += 1
 
 # @client.command()
@@ -101,36 +101,6 @@ async def Waffle(ctx):
 #             await ctx.send('https://imgur.com/5ezNFt7')
 #             counter2 += 1
 
-@client.command()
-async def testWaffle(ctx):
-    ctx.send('breaks after this')
-    wafresult = int(randrange(100))
-    if wafresult > 1:
-        WaffleResponses2 = ['https://imgur.com/YhXuOl0','https://imgur.com/OHu9Ws5','https://imgur.com/uSabMdr','https://imgur.com/FmNkgjc','https://imgur.com/Y1nQvn3','https://imgur.com/qY6LvJp','https://imgur.com/1E01due','https://imgur.com/b0QSgkm','https://imgur.com/zhVhf03']
-        await ctx.send('this part works')
-        await ctx.send(random.choice(WaffleResponses2))
-    else:
-        await ctx.send('a rare meme appears')
-        await ctx.send('https://imgur.com/5ezNFt7')
-
-    # @commands.command(pass_context = True)
-    # async def flip(self,ctx):
-    #     result = int(randrange(100))
-    #     if result < 50:
-    #         await ctx.send(f'Result was: **Heads**')
-    #     else:
-    #         await ctx.send(f'Result was: **Tails**')
-
-
-#     https://imgur.com/YhXuOl0
-# https://imgur.com/OHu9Ws5
-# https://imgur.com/uSabMdr
-# https://imgur.com/FmNkgjc
-# https://imgur.com/Y1nQvn3
-# https://imgur.com/qY6LvJp
-# https://imgur.com/1E01due
-# https://imgur.com/b0QSgkm
-# https://imgur.com/zhVhf03
 
 
 @client.command()
