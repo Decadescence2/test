@@ -96,13 +96,6 @@ async def testWaffle(ctx):
             await ctx.send('https://imgur.com/5ezNFt7')
         counter += 1
 
-    @commands.command(pass_context = True)
-    async def flip(self,ctx):
-        result = int(randrange(100))
-        if result < 50:
-            await ctx.send(f'Result was: **Heads**')
-        else:
-            await ctx.send(f'Result was: **Tails**')
 
 #     https://imgur.com/YhXuOl0
 # https://imgur.com/OHu9Ws5
