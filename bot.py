@@ -91,10 +91,13 @@ async def testWaffle(ctx):
     while counter < 5:
         wafresult = int(randrange(100))
         if wafresult > 1:
+            await ctx.send('this part works')
             await ctx.send(random.choice(WaffleResponses))
-        if wafresult < 1:
+            counter += 1
+        else:
+            await ctx.send('a rare meme appears')
             await ctx.send('https://imgur.com/5ezNFt7')
-        counter += 1
+            counter += 1
 
 
 #     https://imgur.com/YhXuOl0
