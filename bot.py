@@ -82,7 +82,7 @@ async def Waffle(ctx):
     # counter = 0
     # while counter < 5:
     WaffleResponses = ['https://imgur.com/YhXuOl0','https://imgur.com/OHu9Ws5','https://imgur.com/uSabMdr','https://imgur.com/FmNkgjc','https://imgur.com/Y1nQvn3','https://imgur.com/qY6LvJp','https://imgur.com/1E01due','https://imgur.com/b0QSgkm','https://imgur.com/zhVhf03']
-    await message.channel.send(random.choice(WaffleResponses))
+    await ctx.send(random.choice(WaffleResponses))
     await ctx.send('youre a fucking idiot theres a spelling mistake somewhere')
         # counter += 1
 
