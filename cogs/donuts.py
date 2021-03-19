@@ -1,8 +1,8 @@
-# import discord
-# import asyncio
-# import os
-# from itertools import cycle
-# from discord.ext import commands, tasks
+import discord
+import asyncio
+import os
+from itertools import cycle
+from discord.ext import commands, tasks
 # from bot import HasBeenReset
 #
 # Baldwin = int(0)
