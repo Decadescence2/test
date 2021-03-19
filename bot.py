@@ -88,8 +88,8 @@ async def Waffle(ctx):
 @client.command()
 async def testWaffle(ctx):
     counter = 0
-    WaffleResponses = ['https://imgur.com/YhXuOl0','https://imgur.com/OHu9Ws5','https://imgur.com/uSabMdr','https://imgur.com/FmNkgjc','https://imgur.com/Y1nQvn3','https://imgur.com/qY6LvJp','https://imgur.com/1E01due','https://imgur.com/b0QSgkm','https://imgur.com/zhVhf03']
     while counter < 5:
+        WaffleResponses = ['https://imgur.com/YhXuOl0','https://imgur.com/OHu9Ws5','https://imgur.com/uSabMdr','https://imgur.com/FmNkgjc','https://imgur.com/Y1nQvn3','https://imgur.com/qY6LvJp','https://imgur.com/1E01due','https://imgur.com/b0QSgkm','https://imgur.com/zhVhf03']
         wafresult = int(randrange(100))
         if wafresult > 1:
             await ctx.send('this part works')
