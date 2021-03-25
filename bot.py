@@ -11,25 +11,22 @@ HasBeenReset = int(0)
 
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
-def AdminCheck(ctx):
-    return ctx.message.author.id == 339508544409829376
+# def AdminCheck(ctx):
+#     return ctx.message.author.id == 339508544409829376
 
 Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game Dies',
             'With My Amazing Headset', 'UNO.', 'With My Fallout Strap On Mod', 'Speaking Over Niall'
             , 'Dont Starve IRL', '~']
 
 @client.command()
-@client.check(AdminCheck)
 async def Load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
 
 @client.command()
-@client.check(AdminCheck)
 async def Unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
 
 @client.command()
-@client.check(AdminCheck)
 async def Reload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
     client.load_extension(f'cogs.{extension}')
@@ -108,9 +105,9 @@ async def Waffle(ctx):
 
 
 @client.command()
-@client.check(AdminCheck)
-async def Test(ctx):
-    await ctx.send('working')
+if ctx.message.author.id == 339508544409829376:
+    async def Test(ctx):
+        await ctx.send('working')
 
 # called_once_a_week.start()
 client.loop.create_task(change_status())
