@@ -27,10 +27,12 @@ class Spammers(commands.Cog):
     async def on_ready(self):
         print ('Spammer Code Loaded')
 
-    def IDCheck(ctx):
-        member == ctx.message.author.id
-        if ctx.message.author.id in modlist:
-            return member
+    def ListCheck(ctx):
+        async def IsInList(ctx):
+            return is ctx.message.author.id in modlist
+        return commands.check(IsInList)
+
+
 
     @commands.command()
     async def addperm(self, ctx, *, question):
@@ -52,6 +54,12 @@ class Spammers(commands.Cog):
         # for i in range(0, len(modlist)):
         #     print(modlist[i])
         await ctx.send('Modlist cleared, Fuck you all')
+
+    @commands.commands()
+    @ListCheck()
+    async def permtest(self, ctx):
+        print ('success')
+
 
 
     @commands.command()
