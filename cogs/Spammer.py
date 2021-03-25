@@ -33,12 +33,15 @@ class Spammers(commands.Cog):
     @commands.command()
     async def addperm(self, ctx, *, question):
         modlist.append(question)
+        await ctx.send('User ids that have free reign:')
         for i in range(0, len(modlist)):
-            await ctx.send('user id: ' + modlist[i])
+            await ctx.send(modlist[i])
 
-    # @commands.command()
-    # async def ViewModlist(self, ctx):
-    #     for i in range(0, len(modlist)):
+    @commands.command()
+    async def ViewModlist(self, ctx):
+        await ctx.send('User ids that have free reign:')
+        for i in range(0, len(modlist)):
+            await ctx.send(modlist[i])
 
     @commands.command()
     async def clearModlist(self, ctx):
