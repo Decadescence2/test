@@ -55,7 +55,7 @@ class Spammers(commands.Cog):
         #     print(modlist[i])
         await ctx.send('Modlist cleared, Fuck you all')
 
-    @commands.commands()
+    @commands.command()
     @ListCheck()
     async def permtest(self, ctx):
         print ('success')
