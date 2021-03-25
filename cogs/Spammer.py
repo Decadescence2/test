@@ -23,7 +23,7 @@ class Spammers(commands.Cog):
         self.client = client
 
     @commands.Cog.listener()
-    modlist = [339508544409829376]
+    modlist = ['339508544409829376']
     async def on_ready(self):
         print ('Spammer Code Loaded')
     def IDCheck(ctx):
