@@ -27,8 +27,12 @@ class Spammers(commands.Cog):
     async def on_ready(self):
         print ('Spammer Code Loaded')
 
-    def IDCheck(ctx):
+    def AdminCheck(ctx):
         return ctx.message.author.id == 339508544409829376
+
+    def IDCheck(ctx):
+        if ctx.message.author.id in modlist:
+            continue
 
     @commands.command()
     async def addperm(self, ctx, *, question):
