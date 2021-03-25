@@ -105,7 +105,7 @@ async def Waffle(ctx):
 
 
 @client.command()
-if ctx.message.author.id == 339508544409829376:
+@client.is_owner()
     async def Test(ctx):
         await ctx.send('working')
 
