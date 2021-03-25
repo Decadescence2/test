@@ -11,13 +11,12 @@ HasBeenReset = int(0)
 
 client = commands.Bot(command_prefix = '~', case_insensitive=True)
 client.remove_command('help')
+def AdminCheck(ctx):
+    return ctx.message.author.id == 339508544409829376
 
 Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game Dies',
             'With My Amazing Headset', 'UNO.', 'With My Fallout Strap On Mod', 'Speaking Over Niall'
             , 'Dont Starve IRL', '~']
-
-def AdminCheck(ctx):
-    return ctx.message.author.id == 339508544409829376
 
 @client.command()
 @client.check(AdminCheck)
