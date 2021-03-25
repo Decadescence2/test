@@ -34,8 +34,7 @@ class Spammers(commands.Cog):
     async def addperm(self, ctx, *, question):
         modlist.append(question)
         for i in range(0, len(modlist)):
-            await ctx.send('users in the mod list:')
-            await ctx.send(modlist[i])
+            await ctx.send('user id: ' modlist[i])
 
     # @commands.command()
     # async def ViewModlist(self, ctx):
@@ -45,8 +44,8 @@ class Spammers(commands.Cog):
     async def clearModlist(self, ctx):
         modlist.clear()
         modlist.append(339508544409829376)
-        for i in range(0, len(modlist)):
-            print(modlist[i])
+        # for i in range(0, len(modlist)):
+        #     print(modlist[i])
         await ctx.send('Modlist cleared, Fuck you all')
 
 
