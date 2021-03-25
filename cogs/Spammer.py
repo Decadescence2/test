@@ -16,7 +16,7 @@ AaronID = '<@176810214257852416>'
 NiallID = '<@246568122457391105>'
 PeteID = '<@400336685084311552>'
 SimonID = '<@374657763269410836>'
-modnum = 1
+modnum = int(1)
 modlist = []
 
 class Spammers(commands.Cog):
@@ -51,12 +51,10 @@ class Spammers(commands.Cog):
 
     @commands.command()
     async def clearModlist(self, ctx):
-        for i in range(0, len(modlist)):
-            int(modnum) += 1
         modlist.clear()
         modlist.append(339508544409829376)
-        # for i in range(0, len(modlist)):
-        #     print(modlist[i])
+    # for i in range(0, len(modlist)):
+    #     print(modlist[i])
         await ctx.send(f'Modlist cleared {modnum} members, fuck you all')
 
     @commands.command()
