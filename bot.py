@@ -18,14 +18,17 @@ Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game D
 
 
 @client.command()
+@client.check(AdminCheck)
 async def Load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
 
 @client.command()
+@client.check(AdminCheck)
 async def Unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
 
 @client.command()
+@client.check(AdminCheck)
 async def Reload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
     client.load_extension(f'cogs.{extension}')
@@ -104,6 +107,7 @@ async def Waffle(ctx):
 
 
 @client.command()
+@client.check(AdminCheck)
 async def Test(ctx):
     await ctx.send('working')
 
