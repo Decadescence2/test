@@ -22,11 +22,19 @@ class Spammers(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+    modlist = [339508544409829376]
+
     @commands.Cog.listener()
     async def on_ready(self):
         print ('Spammer Code Loaded')
     def IDCheck(ctx):
         return ctx.message.author.id == 339508544409829376
+
+    @commands.command()
+    async def addperm(self, ctx, *, question):
+        modlist.append(question)
+        for i in range(0, len(modlist)):
+            await ctx.send(modlist)
 
     @commands.command()
     async def SpamSimon(self, ctx, *, question):
