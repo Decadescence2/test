@@ -16,6 +16,7 @@ AaronID = '<@176810214257852416>'
 NiallID = '<@246568122457391105>'
 PeteID = '<@400336685084311552>'
 SimonID = '<@374657763269410836>'
+modlist = [339508544409829376]
 
 class Spammers(commands.Cog):
 
@@ -23,9 +24,9 @@ class Spammers(commands.Cog):
         self.client = client
 
     @commands.Cog.listener()
-    modlist = ['339508544409829376']
     async def on_ready(self):
         print ('Spammer Code Loaded')
+
     def IDCheck(ctx):
         return ctx.message.author.id == 339508544409829376
 
