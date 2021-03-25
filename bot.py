@@ -106,8 +106,8 @@ async def Waffle(ctx):
 
 @client.command()
 @client.is_owner()
-    async def Test(ctx):
-        await ctx.send('working')
+async def Test(ctx):
+    await ctx.send('working')
 
 # called_once_a_week.start()
 client.loop.create_task(change_status())
