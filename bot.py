@@ -16,6 +16,8 @@ Messages = ['With My 2 Balls', 'With Baldwins Sister', '7 Days Until This Game D
             'With My Amazing Headset', 'UNO.', 'With My Fallout Strap On Mod', 'Speaking Over Niall'
             , 'Dont Starve IRL', '~']
 
+def AdminCheck(ctx):
+    return ctx.message.author.id == 339508544409829376
 
 @client.command()
 @client.check(AdminCheck)
