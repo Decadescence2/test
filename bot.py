@@ -105,7 +105,7 @@ async def Waffle(ctx):
 
 
 @client.command()
-@client.commands.is_owner()
+@commands.is_owner()
 async def Test(ctx):
     await ctx.send('working')
 
