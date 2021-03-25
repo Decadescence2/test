@@ -35,7 +35,7 @@ class Spammers(commands.Cog):
         modlist.append(question)
         # for i in range(0, len(modlist)):
         #     await ctx.send('users in the mod list: ' + modlist[i])
-        for i in range(0, len(listdata)):
+        for i in range(0, len(modlist)):
             print(modlist[i])
 
     @commands.command()
