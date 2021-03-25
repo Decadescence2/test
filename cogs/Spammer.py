@@ -29,8 +29,8 @@ class Spammers(commands.Cog):
 
     def ListCheck():
         async def IsInList(ctx):
-            member = ctx.message.author.id
-            return ctx.message.author.id in modlist
+            member = ctx.author.id
+            return ctx.author.id in modlist
         return commands.check(IsInList)
 
 
