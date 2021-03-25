@@ -34,7 +34,7 @@ class Spammers(commands.Cog):
     async def addperm(self, ctx, *, question):
         modlist.append(question)
         for i in range(0, len(modlist)):
-            await ctx.send('user id: ' modlist[i])
+            await ctx.send('user id: ' + modlist[i])
 
     # @commands.command()
     # async def ViewModlist(self, ctx):
