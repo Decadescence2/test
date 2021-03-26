@@ -32,7 +32,7 @@ class Spammers(commands.Cog):
             return ctx.author.id in modlist
 
     @commands.command()
-    async def addperm(self, ctx, *, question):
+    async def addperm(self, ctx, question):
         modlist.append(question)
         await ctx.send('User ids that have free reign:')
         for i in range(0, len(modlist)):
@@ -54,7 +54,7 @@ class Spammers(commands.Cog):
 
     @commands.command()
     @commands.check(ListCheck)
-    async def permtest(ctx, self):
+    async def permtest(self, ctx):
         await ctx.send('finally works')
 
 
