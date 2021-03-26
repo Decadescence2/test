@@ -81,7 +81,7 @@ async def on_message(message):
 @client.event
 async def on_reaction_add(reaction, user):
     if reaction.emoji == ':star:':
-        print('test')
+        await message.channel.send('works')
 
 @client.command()
 async def Waffle(ctx):
