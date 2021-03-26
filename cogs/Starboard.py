@@ -19,8 +19,7 @@ class Starboard(commands.Cog):
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
         if payload.emoji.name == '⭐':
-            echo = (message.author.name, 'said', message.content)
-            print (echo)
+            await client.send_message(message.channel, message.content)
 
 
 
