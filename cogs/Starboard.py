@@ -17,9 +17,9 @@ class Starboard(commands.Cog):
         print ('Starboard File Loaded')
 
     @commands.Cog.listener(pass_context = True)
-        async def on_reaction_add(reaction: discord.Reaction, user: Union[discord.Member, discord.User]):
-            if reaction.emoji == global_emoji:
-                await ctx.send('test')
+    async def on_reaction_add(reaction: discord.Reaction, user: Union[discord.Member, discord.User]):
+        if reaction.emoji == global_emoji:
+            await ctx.send('test')
 
 
 
