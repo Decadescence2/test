@@ -89,7 +89,7 @@ def reaction_message():
 
 @client.event
 async def on_reaction_add(reaction, user):
-    if reaction.emoji == "✅":
+    if reaction.emoji == 'star':
         reaction_message()
 
 
