@@ -80,8 +80,7 @@ async def on_message(message):
 
 @client.event
 async def on_reaction_add(reaction, user):
-    await client.process_commands(message)
-    await message.channel.send('test')
+    await bot.say('test')
 
 @client.command()
 async def Waffle(ctx):
