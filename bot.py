@@ -78,20 +78,6 @@ async def on_message(message):
             responses = ['https://imgur.com/SnGm07p', 'https://imgur.com/xUcha8d','https://imgur.com/SFY00cc','https://imgur.com/l1isdSZ','https://imgur.com/XiST5sG','https://imgur.com/Q0c3E8c','https://imgur.com/YFwZgbl','https://imgur.com/vlkOGaf','https://imgur.com/aWyR7iX', 'https://imgur.com/8DjzVc5', 'https://imgur.com/ovOGXf8','https://imgur.com/8HMehnO','https://imgur.com/jvlfhzn','https://imgur.com/8KMJ6sr']
             await message.channel.send(random.choice(responses))
 
-# @client.event
-# async def on_reaction_add(reaction, user):
-#     ctx = await client.get_context()
-#     await ctx.send('test')
-
-def reaction_message():
-    await ctx.send('test')
-
-@client.event
-async def on_reaction_add(reaction, user):
-    if reaction.emoji == 'star':
-        reaction_message()
-
-
 @client.command()
 async def Waffle(ctx):
     counter = 0
