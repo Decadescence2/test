@@ -18,6 +18,7 @@ class Starboard(commands.Cog):
 
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
+        if payload.emoji.name == 'star'
         print('hello')
 
 
