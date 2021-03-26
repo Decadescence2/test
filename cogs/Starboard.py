@@ -17,7 +17,7 @@ class Starboard(commands.Cog):
         print ('Starboard File Loaded')
 
     @commands.Cog.listener()
-    async def on_raw_reaction_add():
+    async def on_raw_reaction_add(reaction, user):
         if reaction.emoji == ':star:':
             await ctx.send('test')
 
