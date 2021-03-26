@@ -85,7 +85,7 @@ async def on_message(message):
 
 def reaction_message():
     async def reaction(ctx):
-        ctx.send('test')
+        await ctx.send('test')
 
 @client.event
 async def on_reaction_add(reaction, user):
