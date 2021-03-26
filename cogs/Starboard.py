@@ -16,7 +16,7 @@ class Starboard(commands.Cog):
     async def on_ready(self):
         print ('Starboard File Loaded')
 
-    def GetMessage():
+    def GetMessage(self):
         await client.send_message(message.channel, message.content)
 
     @commands.Cog.listener()
