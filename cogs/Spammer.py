@@ -16,7 +16,7 @@ AaronID = '<@176810214257852416>'
 NiallID = '<@246568122457391105>'
 PeteID = '<@400336685084311552>'
 SimonID = '<@374657763269410836>'
-modlist = [339508544409829376, 0]
+modlist = []
 
 class Spammers(commands.Cog):
 
