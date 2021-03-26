@@ -16,10 +16,14 @@ class Starboard(commands.Cog):
     async def on_ready(self):
         print ('Starboard File Loaded')
 
+    def GetMessage():
+        await client.send_message(message.channel, message.content)
+
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
         if payload.emoji.name == '⭐':
-            await client.send_message(message.channel, message.content)
+            GetMessage()
+
 
 
 
