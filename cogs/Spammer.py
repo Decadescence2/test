@@ -54,7 +54,7 @@ class Spammers(commands.Cog):
 
     @commands.command()
     @commands.check(ListCheck)
-    async def permtest(ctx):
+    async def permtest(ctx, self):
         await ctx.send('finally works')
 
 
