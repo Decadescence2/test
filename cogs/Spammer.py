@@ -27,7 +27,7 @@ class Spammers(commands.Cog):
     async def on_ready(self):
         print ('Spammer Code Loaded')
 
-    def ListCheck():
+    def ListCheck(ctx):
         if ctx.author.id in modlist:
             return ctx.author.id in modlist
 
